@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$current['title']}-{$Think.CONFIG.title}</title>
+
+		<meta name="keywords" content="{$Think.CONFIG.keywords}" />
+		<meta name="description" content="{$Think.CONFIG.description}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<include file="Public/head" />
+   </head>
+
+	<body class="no-skin">
+		<include file="Public/header" />
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<include file="Public/sidebar" />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<include file="Public/Indexedit" />
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<include file="Public/set" />
+
+						<!-- /section:settings.box -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+									<form class="form-horizontal" id="form" method="post" action="{:U('update')}?id={$link.id}">
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文FEIG标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_fghzname" id="title" placeholder="中文FEIG标题" class="col-xs-10 col-sm-5" value="{$link['cn_fghzname']}">
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文FEIG标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_fghzname" id="title" placeholder="英文FEIG标题" class="col-xs-10 col-sm-5" value="{$link['en_fghzname']}">
+										</div>
+									</div>
+
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文FELG是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_fghzshow" id=""  <if condition="$link['cn_fghzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="cn_fghzshow" id=""  <if condition="$link['cn_fghzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文FELG是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_fghzshow" id=""  <if condition="$link['en_fghzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="en_fghzshow" id=""  <if condition="$link['en_fghzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+									<br/><br/>
+									<hr/>
+									<br/><br/>
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文RFLINKER标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_rrhzname" id="title" placeholder="中文RFLINKER标题" class="col-xs-10 col-sm-5" value="{$link['cn_rrhzname']}">
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文RFLINKER标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_rrhzname" id="title" placeholder="英文RFLINKER标题" class="col-xs-10 col-sm-5" value="{$link['en_rrhzname']}">
+										</div>
+									</div>
+
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文RFLINKER是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_rrhzshow" id=""  <if condition="$link['cn_rrhzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="cn_rrhzshow" id=""  <if condition="$link['cn_rrhzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文RFLINKER是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_rrhzshow" id=""  <if condition="$link['en_rrhzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="en_rrhzshow" id=""  <if condition="$link['en_rrhzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+										
+									
+									<br/><br/>
+									<hr/>
+									<br/><br/>
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文推荐标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_tjhzname" id="title" placeholder="中文推荐标题" class="col-xs-10 col-sm-5" value="{$link['cn_tjhzname']}">
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文推荐标题 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_tjhzname" id="title" placeholder="英文推荐标题" class="col-xs-10 col-sm-5" value="{$link['en_tjhzname']}">
+										</div>
+									</div>
+
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文推荐是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_tjhzshow" id=""  <if condition="$link['cn_tjhzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="cn_tjhzshow" id=""  <if condition="$link['cn_tjhzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文推荐是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_tjhzshow" id=""  <if condition="$link['en_tjhzshow'] eq 1">checked="checked" <else /></if> value="1">开启&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="en_tjhzshow" id=""  <if condition="$link['en_tjhzshow'] eq 2">checked="checked" <else /></if> value="2">不开启
+										</div>
+									</div>
+									
+									
+									
+									
+									
+									
+									
+									
+
+									<div class="col-md-offset-2 col-md-9">
+										<button class="btn btn-info submit" type="button">
+											<i class="icon-ok bigger-110"></i>
+											提交
+										</button>
+
+										&nbsp; &nbsp; &nbsp;
+										<button class="btn" type="reset">
+											<i class="icon-undo bigger-110"></i>
+											重置
+										</button>
+									</div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<include file="Public/footer" />
+			
+		</div><!-- /.main-container -->
+
+		<include file="Public/footerjs" />
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		$(function() {
+			$(".btn-info.submit").click(function(){
+				var webname = $("#webname").val();
+				var url = $("#url").val();
+				if(webname==0){
+					bootbox.dialog({
+						title: '友情提示：',
+						message: "标题必须选择。", 
+						buttons: {
+							"success" : {
+								"label" : "确定",
+								"className" : "btn-danger"
+							}
+						}
+					});
+					return;
+				}
+				if(url==''){
+					bootbox.dialog({
+						title: '友情提示：',
+						message: "链接地址必须填写。", 
+						buttons: {
+							"success" : {
+								"label" : "确定",
+								"className" : "btn-danger"
+							}
+						}
+					});
+					return;
+				}
+				$("#form").submit();
+			});
+		});
+		
+		</script>
+	</body>
+</html>

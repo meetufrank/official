@@ -1,0 +1,60 @@
+[ 2017-05-03T10:19:36+08:00 ] ::1 /guanwang/qwadmin/index.php/lang/en-us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+ERR: 无法加载模块:Lang
+
+[ 2017-05-03T11:10:10+08:00 ] ::1 /guanwang/qwadmin/index.php/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T11:14:45+08:00 ] ::1 /guanwang/qwadmin/index.php/common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001279s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T15:12:13+08:00 ] ::1 /guanwang/qwadmin/index.php/Cs/Index/id/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载模块:Cs
+
+[ 2017-05-03T15:45:32+08:00 ] ::1 /guanwang/qwadmin/index.php/Common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T15:50:04+08:00 ] ::1 /guanwang/qwadmin/index.php/Common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T15:50:05+08:00 ] ::1 /guanwang/qwadmin/index.php/Common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T15:50:05+08:00 ] ::1 /guanwang/qwadmin/index.php/Common
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+ERR: 无法加载模块:Common
+
+[ 2017-05-03T16:34:14+08:00 ] ::1 /guanwang/qwadmin/index.php/Felg/index.html?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+ERR: _MODULE_NOT_EXIST_:Felg
+
+[ 2017-05-03T16:34:37+08:00 ] ::1 /guanwang/qwadmin/index.php/Felg/index.html?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+ERR: 无法加载模块:Felg
+

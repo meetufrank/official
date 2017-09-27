@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$current['title']}-{$Think.CONFIG.title}</title>
+
+		<meta name="keywords" content="{$Think.CONFIG.keywords}" />
+		<meta name="description" content="{$Think.CONFIG.description}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<include file="Public/head" />
+   </head>
+
+	<body class="no-skin">
+		<include file="Public/header" />
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<include file="Public/sidebar" />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<include file="Public/felgproductadd" />
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<include file="Public/set" />
+
+						<!-- /section:settings.box -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+									<form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+																					
+									<div class="space-4"></div>
+									<div class="form-group" id="felgcnhzdiv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG中文频率 </label>
+										<div class="col-sm-9">
+										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listhz" id="val">
+												  <option value ="{$val['cn_fghz']}"> {$val['cn_fghz']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" id="felgcntypediv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG中文类型 </label>
+										<div class="col-sm-9">
+										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listtype" id="val">
+												    <option value ="{$val['cn_fgtypename']}"> {$val['cn_fgtypename']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品编号 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_ftname" id="url" placeholder="中文产品名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品简介 </label>
+										<div class="col-sm-9">
+										<textarea name="cn_fttitle" style="width:400px; height:100px;" rows="3" cols="18"></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+															
+							     
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品规格 </label>
+										<div class="col-sm-9">
+											<textarea name="cn_ftspec" id="en_ftspec" style="width:100%;height:400px;visibility:hidden;"></textarea>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 中文产品图片 </label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_ftimg",88,31)}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+								
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文产品是否推荐 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_choose" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="cn_choose" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+									
+							
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文推荐排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="cn_choosesort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<br/><br/>
+									<hr/>
+									<br/><br/>
+									
+									
+								
+									    
+												
+									<div class="space-4"></div>
+									<div class="form-group" id="enfelgcnhzdiv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文频率 </label>
+										<div class="col-sm-9">
+										<select name="felgenhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listhz" id="val">
+												  <option value ="{$val['en_fghz']}"> {$val['en_fghz']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" id="enfelgcntypediv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文类型 </label>
+										<div class="col-sm-9">
+										<select name="felgentype" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listtype" id="val">
+												    <option value ="{$val['en_fgtypename']}"> {$val['en_fgtypename']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品编号 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_ftname" id="url" placeholder="中文产品名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品简介 </label>
+										<div class="col-sm-9">
+											<textarea name="en_fttitle" rows="3" cols="8" style="width:400px; height:100px;"></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+								
+									
+									
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品规格 </label>
+										<div class="col-sm-9">
+											<textarea name="en_ftspec" id="en_ftspec" style="width:100%;height:400px;visibility:hidden;">{$article['content']}</textarea>
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 英文产品图片 </label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_ftimg",88,31)}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文产品是否推荐 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_choose" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="en_choose" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+								    <div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 产品是否推荐搜索 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="search" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="search" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文推荐排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="en_choosesort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+									
+										
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="ftsort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+
+									<div class="col-md-offset-2 col-md-9">
+										<button class="btn btn-info submit" type="button">
+											<i class="icon-ok bigger-110"></i>
+											提交
+										</button>
+
+										&nbsp; &nbsp; &nbsp;
+										<button class="btn" type="reset">
+											<i class="icon-undo bigger-110"></i>
+											重置
+										</button>
+									</div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<include file="Public/footer" />
+			
+		</div><!-- /.main-container -->
+
+		<include file="Public/footerjs" />
+		<!-- inline scripts related to this page -->
+		<!-- 引入jquery文件 -->
+		<script src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+		$(function() {
+			var editor = KindEditor.create('textarea[name="cn_ftspec"]',{
+				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+				fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+				allowFileManager : true,
+				afterBlur:function(){this.sync();}  
+				});
+			var editor = KindEditor.create('textarea[name="en_ftspec"]',{
+				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+				fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+				allowFileManager : true,
+				afterBlur:function(){this.sync();}  
+				});
+			
+		});
+		</script>
+		
+		
+	
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+		$(function() {
+			$(".btn-info.submit").click(function(){
+				var webname = $("#webname").val();
+				var url = $("#url").val();
+				
+			
+				$("#form").submit();
+			});
+		});
+		
+		</script>
+	</body>
+</html>

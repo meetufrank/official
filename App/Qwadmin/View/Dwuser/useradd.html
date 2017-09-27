@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$current['title']}-{$Think.CONFIG.title}</title>
+
+		<meta name="keywords" content="{$Think.CONFIG.keywords}" />
+		<meta name="description" content="{$Think.CONFIG.description}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<include file="Public/head" />
+   </head>
+
+	<body class="no-skin">
+		<include file="Public/header" />
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<include file="Public/sidebar" />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<include file="Public/dwuser/useradd" />
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<include file="Public/set" />
+
+						<!-- /section:settings.box -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+									<form class="form-horizontal" id="form" method="post" action="{:U('dnwrite')}?id={$id}" enctype="multipart/form-data">
+									<!-- 产品id -->
+									<input style="display:none;" type="text" value="{$id}" name="dwuserid">
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文下载名称 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_downname" id="title" placeholder="中文下载名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+
+                                   <div class="space-4"></div>
+									 <div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文上传文件 </label>
+										<div class="col-sm-9">
+											<input type="file" name="photo[]"  placeholder="中文上传文件" class="col-xs-10 col-sm-5" value="">
+
+
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+
+
+							       <div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文下载名称 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_downname" id="title" placeholder="英文下载名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+
+
+								   <div class="space-4"></div>
+									 <div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文上传文件 </label>
+										<div class="col-sm-9">
+											<input type="file" name="photo[]"  placeholder="英文上传文件" class="col-xs-10 col-sm-5" value="">
+
+
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+
+
+
+								  <div class="space-4"></div>
+								  <div class="form-group">
+									 <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 排序 </label>
+									 <div class="col-sm-9">
+									   <input type="number" name="downsort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+									   <span class="help-inline col-xs-12 col-sm-7">
+										  <span class="middle">越小越靠前。</span>
+									   </span>
+									 </div>
+								  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div class="col-md-offset-2 col-md-9">
+										<button class="btn btn-info submit" type="button">
+											<i class="icon-ok bigger-110"></i>
+											提交
+										</button>
+
+										&nbsp; &nbsp; &nbsp;
+										<button class="btn" type="reset">
+											<i class="icon-undo bigger-110"></i>
+											重置
+										</button>
+									</div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<include file="Public/footer" />
+
+		</div><!-- /.main-container -->
+
+		<include file="Public/footerjs" />
+		<!-- inline scripts related to this page -->
+		<!-- 引入jquery文件 -->
+		<script src="__PUBLIC__/js/jquery-1.9.1.min.js"></script>
+		<script src="__PUBLIC__/ckeditorbiaozhun/ckeditor.js"></script>
+		<script type="text/javascript">
+		      $(function(){
+			       //点击felg中文频率事件
+			       $('#felghzrd').click(function(){
+				   <!--     alert("频率"); -->
+					   $('#felgcntypediv').hide();
+					   $('#felgcnhzdiv').show();
+				   });
+			       $('#felgtyperd').click(function(){
+				      <!--  alert("类型"); -->
+					   $('#felgcnhzdiv').hide();
+					   $('#felgcntypediv').show();
+				   });
+
+
+				    //点击felg英文频率事件
+			       $('#enfelghzrd').click(function(){
+				       <!-- alert("频率"); -->
+					   $('#enfelgcntypediv').hide();
+					   $('#enfelgcnhzdiv').show();
+				   });
+			       $('#enfelgtyperd').click(function(){
+				       <!-- alert("类型"); -->
+					   $('#enfelgcnhzdiv').hide();
+					   $('#enfelgcntypediv').show();
+				   });
+			  })
+		</script>
+		<script type="text/javascript">
+				CKEDITOR.replace('cn_ftspec',{
+					toolbar : 'Full',
+					uiColor : '#9AB8F3',
+					height:'200'
+				});
+
+				CKEDITOR.replace('en_ftspec',{
+					toolbar : 'Full',
+					uiColor : '#9AB8F3',
+					height:'200'
+				});
+
+
+        </script>
+
+		<script type="text/javascript">
+		$(function() {
+			$(".btn-info.submit").click(function(){
+				var webname = $("#webname").val();
+				var url = $("#url").val();
+
+
+				$("#form").submit();
+			});
+		});
+
+		</script>
+	</body>
+</html>

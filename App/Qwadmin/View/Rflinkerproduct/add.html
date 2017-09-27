@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$current['title']}-{$Think.CONFIG.title}</title>
+
+		<meta name="keywords" content="{$Think.CONFIG.keywords}" />
+		<meta name="description" content="{$Think.CONFIG.description}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<include file="Public/head" />
+	
+   </head>
+
+	<body class="no-skin">
+		<include file="Public/header" />
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<include file="Public/sidebar" />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<include file="Public/Rflinkerproductadd" />
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<include file="Public/set" />
+
+						<!-- /section:settings.box -->
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+									<form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+									
+									
+								
+												
+									<div class="space-4"></div>
+									<div  class="form-group" id="felgcnhzdiv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文频率 </label>
+										<div class="col-sm-9">
+										<select name="rflinkercnhzname" id="felgcnhz" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listhz" id="val">
+												  <option value ="{$val['cn_rflinkerhz']}"> {$val['cn_rflinkerhz']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" id="felgcntypediv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文类型 </label>
+										<div class="col-sm-9">
+										<select name="rflinkercntypename" id="felgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listtype" id="val">
+												    <option value ="{$val['cn_rflinkertypename']}"> {$val['cn_rflinkertypename']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品编号 </label>
+										<div class="col-sm-9">
+											<input type="text" name="cn_rrname" id="url" placeholder="中文产品名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品简介 </label>
+										<div class="col-sm-9">
+											<textarea name="cn_rrtitle" rows="3" cols="8" style="width:400px; height:100px;"></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+								
+									
+								
+									<div class="space-4"></div>								
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文产品规格 </label>
+										<div class="col-sm-9">
+											<textarea name="cn_rrspec" id="content" style="width:100%;height:400px;visibility:hidden;"></textarea>
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 中文产品图片 </label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_rrimg",88,31)}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 中文产品是否推荐 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_rrchoose" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="cn_rrchoose" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+									
+							
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文推荐排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="cn_rrchoosesort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<br/><br/>
+									<hr/>
+									<br/><br/>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" id="enfelgcnhzdiv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文频率 </label>
+										<div class="col-sm-9">
+										<select name="rflinkerenhzname" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listhz" id="val">
+												  <option value ="{$val['en_rflinkerhz']}"> {$val['en_rflinkerhz']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" id="enfelgcntypediv">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文类型 </label>
+										<div class="col-sm-9">
+										<select name="rflinkerentypename" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>
+										        <volist name="listtype" id="val">
+												    <option value ="{$val['en_rflinkertypename']}"> {$val['en_rflinkertypename']}</option>
+												</volist>
+										</select>								
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品编号 </label>
+										<div class="col-sm-9">
+											<input type="text" name="en_rrname" id="url" placeholder="中文产品名称" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品简介 </label>
+										<div class="col-sm-9">
+											<textarea name="en_rrtitle" rows="3" cols="8" style="width:400px; height:100px;"></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+					
+									
+									
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文产品规格 </label>
+										<div class="col-sm-9">
+											<textarea name="en_rrspec" id="content" style="width:100%;height:400px;visibility:hidden;"></textarea>
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4"> 英文产品图片 </label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_rrimg",88,31)}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、gif、png、bmp、jpeg，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 英文产品是否推荐 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_rrchoose" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="en_rrchoose" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+									
+							       <div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 搜索是否推荐 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="search" id=""  value="1">推荐&nbsp;&nbsp;&nbsp;
+											<input type="radio" name="search" id=""  value="2">不推荐
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group" style="display:none;">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文推荐排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="en_rrchoosesort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+									
+										
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="rrsort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+
+									<div class="col-md-offset-2 col-md-9">
+										<button class="btn btn-info submit" type="button">
+											<i class="icon-ok bigger-110"></i>
+											提交
+										</button>
+
+										&nbsp; &nbsp; &nbsp;
+										<button class="btn" type="reset">
+											<i class="icon-undo bigger-110"></i>
+											重置
+										</button>
+									</div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<include file="Public/footer" />
+			
+		</div><!-- /.main-container -->
+
+		<include file="Public/footerjs" />
+		<!-- inline scripts related to this page -->
+		<!-- 引入jquery文件 -->
+		
+	<script type="text/javascript">
+		$(function() {
+			var editor = KindEditor.create('textarea[name="en_rrspec"]',{
+				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+				fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+				allowFileManager : true,
+				afterBlur:function(){this.sync();}  
+				});
+				
+			var editor = KindEditor.create('textarea[name="cn_rrspec"]',{
+				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
+				fileManagerJson : '__PUBLIC__/kindeditor/php/file_manager_json.php',
+				allowFileManager : true,
+				afterBlur:function(){this.sync();}  
+				});
+		
+		});
+		</script>
+		
+	
+		
+		<script type="text/javascript">
+		$(function() {
+			$(".btn-info.submit").click(function(){
+				var webname = $("#webname").val();
+				var url = $("#url").val();
+				
+			
+				$("#form").submit();
+			});
+		});
+		
+		</script>
+	</body>
+</html>

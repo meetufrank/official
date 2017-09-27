@@ -1,0 +1,61 @@
+<header id="topnav" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div id="logo">
+          <a class="navbar-brand" href="{:U('Index/Index')}"><img src="__PUBLIC__/qiantai/images/logo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="hidden-xs">
+        <ul class="nav navbar-nav">
+
+		  <!-- CONTROLLER_NAME -->
+          <li><a href="{:U('Index/Index?lang=ch-cn')}"  id="china">中文  </a></li>
+          <li><a href="#" style="pointer-events: none">丨</a></li>
+          <li><a href="{:U('Index/Index?lang=en-us')}"   id="english">EN</a></li>
+        </ul>
+      </div>
+
+	    <script>
+	  window.__arr__={$new_live};
+	  window.__arr2__={$new_live_all};
+	  </script>
+
+      <form class="navbar-form navbar-left">
+          <div class="form-group">
+              <input type="text" id="arrcity" class="form-control" value="Press enter to search">
+              <div id='suggest' class="ac_results">
+
+			  </div>
+          </div>
+      </form>
+
+
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav" id="nav">
+
+          <li class="visible-xs"><a href="{:U('?lang=ch-cn')}" id="mobilechina" style="display:inline-block">中文</a>丨<a href="{:U('?lang=en-us')}" id="mobileenglish" style="display:inline-block">EN</a></li>
+
+
+          <li><a href="{:U('Index/Index')}" <if condition="$style_change eq Index">class="hbgcolor"</if> >{$Think.lang.head_index}</a></li>
+          <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <if condition="$style_change eq Feig OR $style_change eq Rflinker">class="hbgcolor dropdown-toggle" data-toggle="dropdown"</if>>{$Think.lang.head_product}</a>
+            <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="{:U('Rflinker/Index')}">Rflinker</a></li>
+                    <li><a href="{:U('Feig/Index')}">Feig</a></li>
+            </ul>
+          </li>
+          <li class="visible-xs"><a href="#">rflinker</a></li>
+          <li class="visible-xs"><a href="#">feig</a></li>
+          <li><a href="{:U('Vocationlist/Index')}" <if condition="$style_change eq Vocationlist">class="hbgcolor"</if>>{$Think.lang.head_Industry}</a></li>
+          <li><a href="{:U('Codeinput/Index')}" <if condition="$style_change eq Codeinput OR $style_change eq Supportservices">class="hbgcolor"</if>>{$Think.lang.head_support}</a></li>
+          <li><a href="{:U('Aboutus/Index')}" <if condition="$style_change eq Aboutus">class="hbgcolor"</if>>{$Think.lang.head_about}</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>

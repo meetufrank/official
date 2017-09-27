@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>{$current['title']}-{$Think.CONFIG.title}</title>
+
+		<meta name="keywords" content="{$Think.CONFIG.keywords}" />
+		<meta name="description" content="{$Think.CONFIG.description}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<include file="Public/head" />
+   </head>
+
+	<body class="no-skin">
+		<include file="Public/header" />
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<include file="Public/sidebar" />
+			<div class="main-content">
+				<div class="main-content-inner">
+					<!-- #section:basics/content.breadcrumbs -->
+					<include file="Public/breadcrumbsflashviewedit" />
+
+					<!-- /section:basics/content.breadcrumbs -->
+					<div class="page-content">
+						<include file="Public/set" />
+
+						<!-- /section:settings.box -->
+						<div class="row">
+							<div class="col-xs-12">	
+								<!-- PAGE CONTENT BEGINS -->
+									<form class="form-horizontal" id="form" method="post" action="{:U('update')}?id={$link.id}">
+
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文行业名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="cn_nameiy" id="url" placeholder="中文行业名称" class="col-xs-10 col-sm-5" value="{$link['cn_nameiy']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">中文行业缩略图</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_imgiy",88,31,$link['cn_imgiy'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文行业缩略图是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_iyshowimg" <if condition="$link['cn_iyshowimg'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="cn_iyshowimg" <if condition="$link['cn_iyshowimg'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文行业介绍</label>
+										<div class="col-sm-9">
+											<textarea cols="70" rows="13"  name="cn_iycontent" id="cn_iycontent">{$link['cn_iycontent']}</textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">中文行业好友公司logo</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_iylogo",88,31,$link['cn_iylogo'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文好友logo是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_logoshow" <if condition="$link['cn_logoshow'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="cn_logoshow" <if condition="$link['cn_logoshow'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文行业好友公司logo链接 </label>
+										<div class="col-sm-9">
+											<input type="url" name="cn_linksiy" id="url" placeholder="行业好友公司logo" class="col-xs-10 col-sm-5" value="{$link['cn_linksiy']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+								
+											</span>
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例1名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="cn_anliname1" id="url" placeholder="中文经典案例1名称" class="col-xs-10 col-sm-5" value="{$link['cn_anliname1']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+								
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">中文经典案例1</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_anli1",88,31,$link['cn_anli1'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例1是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_anli1show" <if condition="$link['cn_anli1show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="cn_anli1show" <if condition="$link['cn_anli1show'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例2名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="cn_anliname2" id="url" placeholder="中文经典案例2名称" class="col-xs-10 col-sm-5" value="{$link['cn_anliname2']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+								
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">中文经典案例2</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_anli2",88,31,$link['cn_anli2'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例2是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_anli2show" <if condition="$link['cn_anli2show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="cn_anli2show" <if condition="$link['cn_anli2show'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例3名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="cn_anliname3" id="url" placeholder="中文经典案例3名称" class="col-xs-10 col-sm-5" value="{$link['cn_anliname3']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+								
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">中文经典案例3</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("cn_anli3",88,31,$link['cn_anli3'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 中文经典案例3是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="cn_anli3show" <if condition="$link['cn_anli3show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="cn_anli3show" <if condition="$link['cn_anli3show'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<br/><br/>
+									<hr/>
+									<br/><br/>
+									
+									
+									
+									
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文行业名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="en_nameiy" id="url" placeholder="英文行业名称" class="col-xs-10 col-sm-5" value="{$link['en_nameiy']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+											</span>
+										</div>
+									</div>
+									
+
+									
+									
+								
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">英文行业缩略图</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_imgiy",88,31,$link['en_imgiy'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文行业缩略图是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_iyshowimg" <if condition="$link['en_iyshowimg'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="en_iyshowimg" <if condition="$link['en_iyshowimg'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									
+									
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文行业介绍</label>
+										<div class="col-sm-9">
+											<textarea cols="70" rows="13"  name="en_iycontent" id="en_iycontent">{$link['en_iycontent']}</textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+																	
+									
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">英文行业好友公司logo</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_iylogo",88,31,$link['en_iylogo'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文好友logo是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_logoshow" <if condition="$link['en_logoshow'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="en_logoshow" <if condition="$link['en_logoshow'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文行业链接 </label>
+										<div class="col-sm-9">
+											<input type="url" name="en_linksiy" id="url" placeholder="英文行业链接" class="col-xs-10 col-sm-5" value="{$link['en_linksiy']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例1名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="en_anliname1" id="url" placeholder="英文经典案例1名称" class="col-xs-10 col-sm-5" value="{$link['en_anliname1']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">英文经典案例1</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_anli1",88,31,$link['en_anli1'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例1是否开启 </label>
+										<div class="col-sm-9">
+
+											<input type="radio" name="en_anli1show" <if condition="$link['en_anli1show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="en_anli1show" <if condition="$link['en_anli1show'] eq 2">checked="checked" <else /></if>  value="2">不开启
+											
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例2名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="en_anliname2" id="url" placeholder="英文经典案例2名称" class="col-xs-10 col-sm-5" value="{$link['en_anliname2']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">英文经典案例2</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_anli2",88,31,$link['en_anli2'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例2是否开启 </label>
+										<div class="col-sm-9">
+											<input type="radio" name="en_anli2show" <if condition="$link['en_anli2show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="en_anli2show" <if condition="$link['en_anli2show'] eq 2">checked="checked" <else /></if>  value="2">不开启										
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+									
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例3名称 </label>
+										<div class="col-sm-9">
+											<input type="url" name="en_anliname3" id="url" placeholder="英文经典案例3名称" class="col-xs-10 col-sm-5" value="{$link['en_anliname3']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+												
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-4">英文经典案例3</label>
+										<div class="col-sm-9">
+											<div class="col-xs-10 col-sm-5">{:UpImage("en_anli3",88,31,$link['en_anli3'])}</div>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">仅支持jpg、png，且小于1MB。</span>
+											</span>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 英文经典案例3是否开启 </label>
+										<div class="col-sm-9">
+
+											<input type="radio" name="en_anli3show" <if condition="$link['en_anli3show'] eq 1">checked="checked" <else /></if>  value="1">开启&nbsp;&nbsp;
+											<input type="radio" name="en_anli3show" <if condition="$link['en_anli3show'] eq 2">checked="checked" <else /></if>  value="2">不开启										
+											
+											<span>
+												<span class="middle"></span>
+											</span>
+										</div>
+									</div>
+									
+						
+										
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 排序 </label>
+										<div class="col-sm-9">
+											<input type="number" name="iysort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="{$link['iysort']}">
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">越小越靠前。</span>
+											</span>
+										</div>
+									</div>
+
+									<div class="col-md-offset-2 col-md-9">
+										<button class="btn btn-info submit" type="button">
+											<i class="icon-ok bigger-110"></i>
+											提交
+										</button>
+
+										&nbsp; &nbsp; &nbsp;
+										<button class="btn" type="reset">
+											<i class="icon-undo bigger-110"></i>
+											重置
+										</button>
+									</div>
+								</form>
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div>
+			</div><!-- /.main-content -->
+			<include file="Public/footer" />
+			
+		</div><!-- /.main-container -->
+<script type="text/javascript" src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+		<include file="Public/footerjs" />
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		$(function() {
+			$(".btn-info.submit").click(function(){
+				var webname = $("#webname").val();
+				var url = $("#url").val();
+				
+					
+				$("#form").submit();
+			});
+		});
+		
+		
+		</script>
+		
+		<script type="text/javascript">
+				CKEDITOR.replace('cn_iycontent',{
+					toolbar : 'Full',
+					uiColor : '#9AB8F3',
+					height:'200'
+				});
+				
+				
+				CKEDITOR.replace('en_iycontent',{
+					toolbar : 'Full',
+					uiColor : '#9AB8F3',
+					height:'200'
+				});
+        </script>
+	</body>
+</html>

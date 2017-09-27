@@ -1,0 +1,2503 @@
+[ 2017-04-18T10:38:47+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004041s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0060s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0011s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkertype` [ RunTime:0.0040s ]
+SQL: SELECT `id`,cn_rflinkertypename as rflinkertypename,`rrtypesort` FROM `qw_rflinkertype` ORDER BY rrtypesort  [ RunTime:0.0005s ]
+SQL: SELECT cn_rflinkerhz as rflinkerhz FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,`rrsort` FROM `qw_rflinkerproduct` WHERE ( rflinkercnhzname = '中文频率1' ) ORDER BY rrsort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 114 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 116 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 117 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 118 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 172 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 173 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2017-04-18T10:38:53+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/rrhz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001992s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005391s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1953s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0081s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0061s ]
+SQL: select id,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,rrsort from qw_rflinkerproduct where rflinkercnhzname = '中文频率3' order by rrsort [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000933s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001154s ]
+
+[ 2017-04-18T10:38:54+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/rrhz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002068s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0044s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0047s ]
+SQL: select id,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,rrsort from qw_rflinkerproduct where rflinkercnhzname = '中文频率2' order by rrsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001206s ]
+
+[ 2017-04-18T10:38:55+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/rrhz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002240s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0513s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0063s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0050s ]
+SQL: select id,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,rrsort from qw_rflinkerproduct where rflinkercnhzname = '中文频率1' order by rrsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2017-04-18T14:25:06+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002192s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005524s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0046s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkertype` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_rflinkertypename as rflinkertypename,`rrtypesort` FROM `qw_rflinkertype` ORDER BY rrtypesort  [ RunTime:0.0005s ]
+SQL: SELECT cn_rflinkerhz as rflinkerhz FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,`rrsort` FROM `qw_rflinkerproduct` WHERE ( rflinkercnhzname = '中文频率1' ) ORDER BY rrsort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 114 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 116 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 117 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 118 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 172 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 173 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2017-04-18T14:37:51+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/rrtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002583s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007215s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0047s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0051s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0055s ]
+SQL: select id,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,rrsort from qw_rflinkerproduct where rflinkercntypename = '中文类型2' order by rrsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2017-04-18T14:37:52+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/rrtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001309s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003942s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0056s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0063s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0056s ]
+SQL: select id,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,rrsort from qw_rflinkerproduct where rflinkercntypename = '中文类型3' order by rrsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-04-18T14:42:01+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002717s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0063s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0041s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0053s ]
+SQL: SELECT `id`,cn_fghz as fghz,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgtype` [ RunTime:0.0039s ]
+SQL: SELECT `id`,cn_fgtypename as fgtypename,`fgtypesort` FROM `qw_felgtype` ORDER BY fgtypesort  [ RunTime:0.0006s ]
+SQL: SELECT cn_fghz as fghz FROM `qw_felghz` ORDER BY fghzsort LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,cn_fttitle as fttitle,cn_ftimg as ftimg,cn_ftname as ftname,`ftsort` FROM `qw_felgproduct` WHERE ( felgcnhzname = 'LF' ) ORDER BY ftsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_productlistimgs` [ RunTime:0.0287s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_fwlink as fwlink,cn_flashviewphone as flashviewphone,cn_fwshowpc as fwshowpc,cn_fwshowphone as fwshowphone,`fwsort` FROM `qw_productlistimgs` ORDER BY fwsort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 115 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 116 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 117 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 118 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 119 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2017-04-18T14:42:05+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Rflinker/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002966s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0045s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkertype` [ RunTime:0.0038s ]
+SQL: SELECT `id`,cn_rflinkertypename as rflinkertypename,`rrtypesort` FROM `qw_rflinkertype` ORDER BY rrtypesort  [ RunTime:0.0004s ]
+SQL: SELECT cn_rflinkerhz as rflinkerhz FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `id`,cn_rrtitle as rrtitle,cn_rrimg as rrimg,cn_rrname as rrname,`rrsort` FROM `qw_rflinkerproduct` WHERE ( rflinkercnhzname = '中文频率1' ) ORDER BY rrsort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 114 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 115 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 116 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 117 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 118 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 158 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 172 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\e01dc9f360dcfa1a7694d7f8f2dee76d.php 第 173 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034475s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-04-18T14:42:09+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002198s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0058s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0265s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0051s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0040s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `id`,cn_ftname as ftname,cn_ftimg as ftimg,cn_fttitle as fttitle FROM `qw_felgproduct` WHERE ( cn_choose = 1 ) LIMIT 4   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0064s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000416s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.217639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.217876s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2017-04-18T14:54:54+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006480s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0042s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0058s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0040s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0056s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0039s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rrsort' in 'order clause'
+
+[ 2017-04-18T14:55:22+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002349s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0048s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0043s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.2126s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.1697s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0004s ]
+
+[ 2017-04-18T14:55:22+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004260s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0068s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0043s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0208s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0003s ]
+
+[ 2017-04-18T14:55:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002397s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1059s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0476s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0060s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0057s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0929s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0004s ]
+
+[ 2017-04-18T14:56:00+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003846s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0042s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0046s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0045s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0040s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0039s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0045s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined variable: felgtjs F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-04-18T14:56:01+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003757s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0047s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0055s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0059s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000368s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000656s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined variable: felgtjs F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001759s ]
+
+[ 2017-04-18T14:56:01+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001660s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005886s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0042s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0060s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0041s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0050s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0055s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000556s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined variable: felgtjs F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-04-18T14:58:18+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005331s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0049s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0085s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0045s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0042s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000960s ]
+
+[ 2017-04-18T14:58:19+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006210s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1675s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0086s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0052s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0077s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2017-04-18T15:00:50+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003703s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0044s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0040s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0045s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0060s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0039s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053255s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000855s ]
+
+[ 2017-04-18T15:00:50+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002438s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0067s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0056s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0046s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0053s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0067s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000457s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001471s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003240s ]
+
+[ 2017-04-18T15:06:05+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Index/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000921s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002655s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0048s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0049s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0053s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0039s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0047s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0043s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000505s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000816s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\3da8682377a51f4116c98bfda6b18a92.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001256s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001536s ]
+
+[ 2017-04-18T15:06:06+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000948s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004016s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0066s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0062s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0012s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_indexshow` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_fghzname as fghzname,cn_fghzshow as fghzshow,cn_rrhzname as rrhzname,cn_rrhzshow as rrhzshow,cn_tjhzname as tjhzname,cn_tjhzshow as tjhzshow FROM `qw_indexshow` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_flashview` [ RunTime:0.0061s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_title as title,cn_fwshowpc as fwshowpc,cn_fwlink as fwlink,`fwsort` FROM `qw_flashview` ORDER BY fwsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0069s ]
+SQL: SELECT `id`,cn_fghz as fghz,cn_fghztitle as fghztitle,cn_fghzimg as fghzimg,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerhz` [ RunTime:0.0044s ]
+SQL: SELECT `id`,cn_rflinkerhz as rflinkerhz,cn_rrtitle as rrtitle,cn_rrimg as rrimg,`rrsort` FROM `qw_rflinkerhz` ORDER BY rrsort LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_tuijian` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_felgname as felgname,cn_rrname as rrname,`type`,`tjsotr` FROM `qw_tuijian` ORDER BY tjsotr  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0065s ]
+SQL: SELECT `id`,cn_imgiy as imgiy,`iysort` FROM `qw_industry` ORDER BY iysort LIMIT 4   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000504s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000936s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 75 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 76 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 77 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 78 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 79 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+NOTIC: [8] Undefined index: ftimg F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 194 行.
+NOTIC: [8] Undefined index: ftname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 197 行.
+NOTIC: [8] Undefined index: fttitle F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006082s ]
+
+[ 2017-04-18T15:57:17+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Codeinput/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003849s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0044s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0058s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 115 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 116 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 116 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 117 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 118 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\fb0bba9424e8c48ededf3668965e76e3.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.173242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.173437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001484s ]
+
+[ 2017-04-18T15:57:23+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Vocationlist/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002286s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0044s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0053s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 73 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 74 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 74 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 75 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 76 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2017-04-18T15:57:23+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Vocationlist/getlist/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005505s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0052s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0055s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0051s ]
+SQL: select id,cn_nameiy as nameiy,cn_imgiy as imgiy,iysort from qw_industry order by iysort limit 0,4 [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001022s ]
+
+[ 2017-04-18T18:15:56+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Vocationlist/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001529s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.013058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014983s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0075s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0083s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0033s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 73 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 74 行.
+NOTIC: [8] Use of undefined constant Rflinker - assumed 'Rflinker' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 74 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 75 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 76 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\17ab6b028a23c7b6c8e8ca42d3d570bd.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104264s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.041358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041636s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004218s ]
+
+[ 2017-04-18T18:15:57+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Vocationlist/getlist/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003602s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0056s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_industry` [ RunTime:0.0061s ]
+SQL: select id,cn_nameiy as nameiy,cn_imgiy as imgiy,iysort from qw_industry order by iysort limit 0,4 [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002201s ]
+
+[ 2017-04-18T18:16:01+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001863s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005297s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0053s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0073s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,cn_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,cn_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0065s ]
+SQL: SELECT `id`,cn_fghz as fghz,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgtype` [ RunTime:0.0051s ]
+SQL: SELECT `id`,cn_fgtypename as fgtypename,`fgtypesort` FROM `qw_felgtype` ORDER BY fgtypesort  [ RunTime:0.0008s ]
+SQL: SELECT cn_fghz as fghz FROM `qw_felghz` ORDER BY fghzsort LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,cn_fttitle as fttitle,cn_ftimg as ftimg,cn_ftname as ftname,`ftsort` FROM `qw_felgproduct` WHERE ( felgcnhzname = 'LF' ) ORDER BY ftsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_productlistimgs` [ RunTime:0.0070s ]
+SQL: SELECT `id`,cn_flashviewpc as flashviewpc,cn_fwlink as fwlink,cn_flashviewphone as flashviewphone,cn_fwshowpc as fwshowpc,cn_fwshowphone as fwshowphone,`fwsort` FROM `qw_productlistimgs` ORDER BY fwsort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000580s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 115 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 116 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 117 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 118 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 119 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 181 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001620s ]
+
+[ 2017-04-18T18:16:05+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/Index/lang/en-us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002035s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.041677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.044259s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0267s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0049s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0044s ]
+SQL: SELECT `id`,en_fghz as fghz,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgtype` [ RunTime:0.0055s ]
+SQL: SELECT `id`,en_fgtypename as fgtypename,`fgtypesort` FROM `qw_felgtype` ORDER BY fgtypesort  [ RunTime:0.0006s ]
+SQL: SELECT en_fghz as fghz FROM `qw_felghz` ORDER BY fghzsort LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,`ftsort` FROM `qw_felgproduct` WHERE ( felgenhzname = 'LF' ) ORDER BY ftsort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_productlistimgs` [ RunTime:0.0055s ]
+SQL: SELECT `id`,en_flashviewpc as flashviewpc,en_fwlink as fwlink,en_flashviewphone as flashviewphone,en_fwshowpc as fwshowpc,en_fwshowphone as fwshowphone,`fwsort` FROM `qw_productlistimgs` ORDER BY fwsort  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 115 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 116 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 117 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 118 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 119 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 181 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000712s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004869s ]
+
+[ 2017-04-18T18:16:09+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001160s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004946s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0115s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0061s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001495s ]
+
+[ 2017-04-18T18:16:09+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002730s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0054s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0074s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000955s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001267s ]
+
+[ 2017-04-18T18:16:10+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001532s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003980s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0916s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.1341s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0069s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0011s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.1156s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2017-04-18T18:16:11+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004692s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0543s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.2693s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0058s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0070s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
+
+[ 2017-04-18T18:16:11+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004249s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.3947s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0183s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0067s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001330s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001546s ]
+
+[ 2017-04-18T18:16:12+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004685s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0065s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0089s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0012s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.4346s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001376s ]
+
+[ 2017-04-18T18:16:13+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004457s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.4004s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.2149s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0191s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001128s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2017-04-18T18:16:14+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005278s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.4304s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.2769s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0202s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0091s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001176s ]
+
+[ 2017-04-18T18:16:15+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004219s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008726s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.6131s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0139s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0138s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001345s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001618s ]
+
+[ 2017-04-18T18:16:15+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006390s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0077s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0082s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2017-04-18T18:16:16+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002600s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0516s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0070s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0332s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2017-04-18T18:16:17+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000757s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003213s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0416s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.1862s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0087s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001483s ]
+
+[ 2017-04-18T18:16:19+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003216s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0122s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0058s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001558s ]
+
+[ 2017-04-18T18:16:19+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004190s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0981s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0077s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0020s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0087s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001454s ]
+
+[ 2017-04-18T18:16:21+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001368s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005788s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0148s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0086s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0012s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0093s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002208s ]
+
+[ 2017-04-18T18:16:21+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000955s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001145s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007316s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0144s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0058s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001468s ]
+
+[ 2017-04-18T18:16:22+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004225s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0065s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0094s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0069s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001506s ]
+
+[ 2017-04-18T18:16:22+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003809s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0058s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0061s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0062s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Antennen' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001356s ]
+
+[ 2017-04-18T18:16:23+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003304s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006492s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1349s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.1233s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0058s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0051s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Gates' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001233s ]
+
+[ 2017-04-18T18:16:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009255s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.4098s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0075s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0069s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Zubehör' order by ftsort [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001645s ]
+
+[ 2017-04-18T18:16:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002941s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008179s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0069s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0219s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0067s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0019s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0085s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Antennen' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2017-04-18T18:16:25+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001726s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006857s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0184s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0083s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0015s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0087s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001850s ]
+
+[ 2017-04-18T18:16:25+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008418s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0384s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0073s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0076s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001716s ]
+
+[ 2017-04-18T18:16:25+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005789s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0064s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0063s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0070s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001476s ]
+
+[ 2017-04-18T18:16:26+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009731s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0062s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0065s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0069s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001421s ]
+
+[ 2017-04-18T18:16:26+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001087s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004471s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0071s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0075s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0069s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001131s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001419s ]
+
+[ 2017-04-18T18:16:27+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001171s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008788s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0066s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0066s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0055s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001513s ]
+
+[ 2017-04-18T18:16:28+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004186s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0066s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0070s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0013s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001465s ]
+
+[ 2017-04-18T18:16:29+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003242s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0130s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0136s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001931s ]
+
+[ 2017-04-18T18:16:29+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006105s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0070s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0096s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001494s ]
+
+[ 2017-04-18T18:26:15+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/Index/lang/en-us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002991s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0048s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0062s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felghz` [ RunTime:0.0060s ]
+SQL: SELECT `id`,en_fghz as fghz,`fghzsort` FROM `qw_felghz` ORDER BY fghzsort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgtype` [ RunTime:0.0044s ]
+SQL: SELECT `id`,en_fgtypename as fgtypename,`fgtypesort` FROM `qw_felgtype` ORDER BY fgtypesort  [ RunTime:0.0007s ]
+SQL: SELECT en_fghz as fghz FROM `qw_felghz` ORDER BY fghzsort LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT `id`,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,`ftsort` FROM `qw_felgproduct` WHERE ( felgenhzname = 'LF' ) ORDER BY ftsort  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_productlistimgs` [ RunTime:0.0172s ]
+SQL: SELECT `id`,en_flashviewpc as flashviewpc,en_fwlink as fwlink,en_flashviewphone as flashviewphone,en_fwshowpc as fwshowpc,en_fwshowphone as fwshowphone,`fwsort` FROM `qw_productlistimgs` ORDER BY fwsort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 115 行.
+NOTIC: [8] Use of undefined constant Felg - assumed 'Felg' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 116 行.
+NOTIC: [8] Use of undefined constant Vocationlist - assumed 'Vocationlist' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 117 行.
+NOTIC: [8] Use of undefined constant Codeinput - assumed 'Codeinput' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 118 行.
+NOTIC: [8] Use of undefined constant Aboutus - assumed 'Aboutus' F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 119 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexhzname F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 166 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 181 行.
+NOTIC: [8] Undefined variable: indexnullhz F:\wamp\www\guanwang\qwadmin\App\Runtime\Cache\Home\9b6d1002631c08af46987a84e3316e46.php 第 182 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002592s ]
+
+[ 2017-04-18T18:26:20+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003037s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008439s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0063s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0069s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0067s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001704s ]
+
+[ 2017-04-18T18:26:20+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004066s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0050s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0069s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0013s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0108s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002922s ]
+
+[ 2017-04-18T18:26:21+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006609s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0042s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0060s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0049s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001172s ]
+
+[ 2017-04-18T18:26:22+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003889s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0343s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0061s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0012s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001854s ]
+
+[ 2017-04-18T18:26:23+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001560s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007955s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0040s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0071s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0019s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0050s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001784s ]
+
+[ 2017-04-18T18:26:23+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005011s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0052s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0074s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0046s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001829s ]
+
+[ 2017-04-18T18:26:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001858s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006216s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0044s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0069s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0050s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Antennen' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001270s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001519s ]
+
+[ 2017-04-18T18:26:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004768s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.2624s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0056s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0008s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0063s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Gates' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001659s ]
+
+[ 2017-04-18T18:26:24+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002561s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005453s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0073s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0011s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0074s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Zubehör' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001907s ]
+
+[ 2017-04-18T18:32:47+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003079s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0055s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0087s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001771s ]
+
+[ 2017-04-18T18:32:48+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004255s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0048s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0044s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0015s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0077s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002036s ]
+
+[ 2017-04-18T18:32:49+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004023s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0076s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0057s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0071s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001937s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002235s ]
+
+[ 2017-04-18T18:32:50+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005685s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0057s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0086s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002106s ]
+
+[ 2017-04-18T18:32:52+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003422s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1026s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.1022s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0042s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0061s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002047s ]
+
+[ 2017-04-18T18:32:52+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003542s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0046s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0047s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0055s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001223s ]
+
+[ 2017-04-18T18:32:54+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001558s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004365s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0038s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0050s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0047s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2017-04-18T18:32:55+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003503s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011065s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0050s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0070s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0076s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002098s ]
+
+[ 2017-04-18T18:32:55+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000956s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003860s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0053s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0059s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001236s ]
+
+[ 2017-04-18T18:32:56+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003899s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0048s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0059s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0051s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001475s ]
+
+[ 2017-04-18T18:32:57+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001412s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004975s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0069s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0076s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001959s ]
+
+[ 2017-04-18T18:32:58+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006233s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0051s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0055s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0016s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0082s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001971s ]
+
+[ 2017-04-18T18:32:59+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001930s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005104s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0047s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0415s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0079s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Antennen' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2017-04-18T18:32:59+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002604s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006315s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0509s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0497s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0073s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0011s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0082s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Gates' order by ftsort [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001507s ]
+
+[ 2017-04-18T18:33:00+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001438s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007014s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0074s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0091s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0236s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Zubehör' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002792s ]
+
+[ 2017-04-18T18:33:01+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004397s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0063s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0068s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0995s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2017-04-18T18:33:02+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004081s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.1572s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0057s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2017-04-18T18:33:03+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003586s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0065s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0056s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0064s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003722s ]
+
+[ 2017-04-18T18:33:04+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001604s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004933s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0043s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0054s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0062s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2017-04-18T18:33:06+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.005769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007863s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0067s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0093s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0010s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0077s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001860s ]
+
+[ 2017-04-18T18:33:09+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000998s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004765s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0058s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0046s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'LF' order by ftsort [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000969s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2017-04-18T18:33:11+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004194s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0039s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0047s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0007s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0074s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'HF' order by ftsort [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002246s ]
+
+[ 2017-04-18T18:33:12+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felghz
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003138s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0045s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0084s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0017s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0660s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgenhzname = 'UHFen' order by ftsort [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002012s ]
+
+[ 2017-04-18T18:33:13+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004838s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0061s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0045s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0005s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0079s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Stationäre Leser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001813s ]
+
+[ 2017-04-18T18:33:14+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004885s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0205s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0053s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0063s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Tischleser' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2017-04-18T18:33:14+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001552s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004410s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0140s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0074s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0065s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Handheld Leser' order by ftsort [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001100s ]
+
+[ 2017-04-18T18:33:15+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000196s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005778s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0066s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0073s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0009s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0080s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Module' order by ftsort [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001199s ]
+
+[ 2017-04-18T18:33:15+08:00 ] ::1 /guanwang/qwadmin/index.php/Home/Felg/felgtype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003708s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0070s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `qw_rflinkerproduct` [ RunTime:0.0055s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` WHERE ( search = 1 ) UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct where search=1 [ RunTime:0.0006s ]
+SQL: SELECT `id`,en_ftname as name,`xl_type` FROM `qw_felgproduct` UNION SELECT id,en_rrname as name,xl_type FROM qw_rflinkerproduct  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `qw_felgproduct` [ RunTime:0.0053s ]
+SQL: select id,en_fttitle as fttitle,en_ftimg as ftimg,en_ftname as ftname,ftsort from qw_felgproduct where felgentypename = 'Antennen' order by ftsort [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001631s ]
+

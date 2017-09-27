@@ -1,0 +1,108 @@
+[ 2017-03-21T14:02:08+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.164127s ]
+INFO: [ app_init ] --END-- [ RunTime:0.269299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.466109s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.850458s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.317783s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:1.4737s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.1601s ]
+NOTIC: [8] Use of undefined constant __VAR_LANGUAGE__ - assumed '__VAR_LANGUAGE__' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant lang - assumed 'lang' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: Think F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Use of undefined constant form_email - assumed 'form_email' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000555s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.158276s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.158482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002944s ]
+
+[ 2017-03-21T14:02:08+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.162527s ]
+INFO: [ app_init ] --END-- [ RunTime:0.270950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.466428s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.849246s ]
+INFO: [ app_begin ] --END-- [ RunTime:1.316991s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0065s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant __VAR_LANGUAGE__ - assumed '__VAR_LANGUAGE__' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant lang - assumed 'lang' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: Think F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Use of undefined constant form_email - assumed 'form_email' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002825s ]
+
+[ 2017-03-21T14:45:02+08:00 ] ::1 /guanwang/qwadmin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.034562s ]
+INFO: [ app_init ] --END-- [ RunTime:0.090305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.080459s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.066981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.147985s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0739s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0009s ]
+NOTIC: [8] Use of undefined constant __VAR_LANGUAGE__ - assumed '__VAR_LANGUAGE__' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant lang - assumed 'lang' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: Think F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Use of undefined constant form_email - assumed 'form_email' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000349s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.896435s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.896646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.048788s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.049061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.051274s ]
+INFO: [ app_end ] --END-- [ RunTime:0.051738s ]
+
+[ 2017-03-21T14:46:39+08:00 ] ::1 /guanwang/qwadmin/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005553s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.007036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013105s ]
+SQL: SHOW COLUMNS FROM `qw_setting` [ RunTime:0.0279s ]
+SQL: SELECT `k`,`v` FROM `qw_setting`  [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant __VAR_LANGUAGE__ - assumed '__VAR_LANGUAGE__' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant lang - assumed 'lang' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Undefined variable: Think F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+NOTIC: [8] Use of undefined constant form_email - assumed 'form_email' F:\wamp\www\guanwang\qwadmin\App\Home\Controller\IndexController.class.php 第 24 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.238100s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.238300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.030728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.030990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005732s ]
+
