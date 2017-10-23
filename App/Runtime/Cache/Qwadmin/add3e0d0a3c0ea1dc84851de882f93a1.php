@@ -10,35 +10,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 				<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/bootstrap.css" />
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/font-awesome.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/bootstrap.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-fonts.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace-fonts.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-ie.css" />
+		  <link rel="stylesheet" href="/Public/qwadmin/css/ace-ie.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="/zhanggw/Public/qwadmin/js/ace-extra.js"></script>
+		<script src="/Public/qwadmin/js/ace-extra.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="/zhanggw/Public/qwadmin/js/html5shiv.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/respond.js"></script>
+		<script src="/Public/qwadmin/js/html5shiv.js"></script>
+		<script src="/Public/qwadmin/js/respond.js"></script>
 		<![endif]-->
    </head>
 
@@ -89,7 +89,7 @@
 						</li>
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php if( $user["head"] == '' ): ?>/zhanggw/Public/qwadmin/avatars/avatar2.png<?php else: ?>/zhanggw<?php echo ($user["head"]); endif; ?>" alt="<?php echo ($user["user"]); ?>" />
+								<img class="nav-user-photo" src="<?php if( $user["head"] == '' ): ?>/Public/qwadmin/avatars/avatar2.png<?php else: ?><?php echo ($user["head"]); endif; ?>" alt="<?php echo ($user["user"]); ?>" />
 								<span class="user-info">
 									<small>欢迎光临，</small>
 									<?php echo ($user["user"]); ?>
@@ -365,23 +365,23 @@
 											<td class="center"><input class="ids" type="checkbox" name="ids[]" value="<?php echo ($val['id']); ?>"></td>
                                             <td class="center">
 											   <?php if($val['cn_fwshowpc'] == 2): ?>暂不开启<?php endif; ?>
-											   <?php if($val['cn_fwshowpc'] == 1 and $val['cn_flashviewpc'] != ''): ?><img src="/zhanggw<?php echo ($val['cn_flashviewpc']); ?>" style="width:100px; height:50px;"><?php endif; ?>
+											   <?php if($val['cn_fwshowpc'] == 1 and $val['cn_flashviewpc'] != ''): ?><img src="<?php echo ($val['cn_flashviewpc']); ?>" style="width:100px; height:50px;"><?php endif; ?>
 											   <?php if($val['cn_flashviewpc'] == ''): ?>暂无图片<?php endif; ?>
 											</td>
 								
 											 <td style="display:none;" class="center">
 											   <?php if($val['cn_fwshowphone'] == 2): ?>暂不开启<?php endif; ?>
-											   <?php if($val['cn_fwshowphone'] == 1 and $val['cn_flashviewphone'] != ''): ?><img src="/zhanggw<?php echo ($val['cn_flashviewphone']); ?>" style="width:100px; height:50px;"><?php endif; ?>
+											   <?php if($val['cn_fwshowphone'] == 1 and $val['cn_flashviewphone'] != ''): ?><img src="<?php echo ($val['cn_flashviewphone']); ?>" style="width:100px; height:50px;"><?php endif; ?>
 											   <?php if($val['cn_flashviewphone'] == ''): ?>暂无图片<?php endif; ?>
 											</td>
 											 <td class="center">
 											   <?php if($val['en_fwshowpc'] == 2): ?>暂不开启<?php endif; ?>
-											   <?php if($val['en_fwshowpc'] == 1 and $val['en_flashviewpc'] != ''): ?><img src="/zhanggw<?php echo ($val['en_flashviewpc']); ?>" style="width:100px; height:50px;"><?php endif; ?>
+											   <?php if($val['en_fwshowpc'] == 1 and $val['en_flashviewpc'] != ''): ?><img src="<?php echo ($val['en_flashviewpc']); ?>" style="width:100px; height:50px;"><?php endif; ?>
 											   <?php if($val['en_flashviewpc'] == ''): ?>暂无图片<?php endif; ?>
 											</td>
 											 <td style="display:none;" class="center">
 											   <?php if($val['en_fwshowphone'] == 2): ?>暂不开启<?php endif; ?>
-											   <?php if($val['en_fwshowphone'] == 1 and $val['en_flashviewphone'] != ''): ?><img src="/zhanggw<?php echo ($val['en_flashviewphone']); ?>" style="width:100px; height:50px;"><?php endif; ?>
+											   <?php if($val['en_fwshowphone'] == 1 and $val['en_flashviewphone'] != ''): ?><img src="<?php echo ($val['en_flashviewphone']); ?>" style="width:100px; height:50px;"><?php endif; ?>
 											   <?php if($val['en_flashviewphone'] == ''): ?>暂无图片<?php endif; ?>
 											</td>
 										
@@ -424,47 +424,47 @@
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 		</script>
-		<script src="/zhanggw/Public/qwadmin/js/bootstrap.js"></script>
+		<script src="/Public/qwadmin/js/bootstrap.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<script charset="utf-8" src="/zhanggw/Public/kindeditor/kindeditor-min.js"></script>
-		<script charset="utf-8" src="/zhanggw/Public/kindeditor/lang/zh_CN.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/bootbox.js"></script>
+		<script charset="utf-8" src="/Public/kindeditor/kindeditor-min.js"></script>
+		<script charset="utf-8" src="/Public/kindeditor/lang/zh_CN.js"></script>
+		<script src="/Public/qwadmin/js/bootbox.js"></script>
 		<!-- ace scripts -->
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.scroller.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.colorpicker.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.fileinput.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.typeahead.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.wysiwyg.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.spinner.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.treeview.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.wizard.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.aside.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.ajax-content.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.touch-drag.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.sidebar.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.sidebar-scroll-1.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.submenu-hover.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.widget-box.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings-rtl.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings-skin.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.widget-on-reload.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.searchbox-autocomplete.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.scroller.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.colorpicker.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.fileinput.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.typeahead.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.wysiwyg.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.spinner.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.treeview.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.wizard.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.aside.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.ajax-content.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.touch-drag.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.sidebar.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.sidebar-scroll-1.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.submenu-hover.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.widget-box.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings-rtl.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings-skin.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.widget-on-reload.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.searchbox-autocomplete.js"></script>
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
 		$(function(){

@@ -10,18 +10,18 @@
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond./officialweb/Public/qiantai/js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond./Public/qiantai/js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/flexslider.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/style.css?a=1">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?a=1">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/new.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css">
   <style type="text/css">
     .cs{
             width:100%;
@@ -106,7 +106,7 @@
           <span class="icon-bar"></span>
         </button>
         <div id="logo">
-          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/officialweb/Public/qiantai/images/logo.png" alt=""></a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/Public/qiantai/images/logo.png" alt=""></a>
         </div>
       </div>
       <div class="hidden-xs">
@@ -144,8 +144,8 @@
           <li><a href="<?php echo U('Index/Index');?>" <?php if($style_change == Index): ?>class="hbgcolor"<?php endif; ?> ><?php echo (L("head_index")); ?></a></li>
           <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor dropdown-toggle" data-toggle="dropdown"<?php endif; ?>><?php echo (L("head_product")); ?></a>
             <ul class="dropdown-menu" id="dropdown">
-                    <li><a href="<?php echo U('Rflinker/Index');?>">rflinker</a></li>
-                    <li><a href="<?php echo U('Feig/Index');?>">feig</a></li>
+                    <li><a href="<?php echo U('Rflinker/Index');?>">Rflinker</a></li>
+                    <li><a href="<?php echo U('Feig/Index');?>">Feig</a></li>
             </ul>
           </li>
           <li class="visible-xs"><a href="#">rflinker</a></li>
@@ -176,7 +176,7 @@
   <div id="backgrounds">
     <ul class="slides">
 
-	  <?php if(is_array($img)): $i = 0; $__LIST__ = $img;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['fwshowpc'] != 2 and $val['flashviewpc'] != ''): ?><li><img src="/officialweb<?php echo ($val['flashviewpc']); ?>" alt=""></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+	  <?php if(is_array($img)): $i = 0; $__LIST__ = $img;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['fwshowpc'] != 2 and $val['flashviewpc'] != ''): ?><li><img src="<?php echo ($val['flashviewpc']); ?>" alt=""></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 
     </ul>
   </div>
@@ -210,14 +210,14 @@
 			<div class="container">
 			  <div class="section-title">
 				<!-- <h2><?php echo (L("index_FEIG")); ?></h2> -->
-        <img src="/officialweb/Public/qiantai/images/FEIG_Logo.png">
+        <img src="/Public/qiantai/images/FEIG_Logo.png">
 				<p><?php echo ($indexshowlist["fghzname"]); ?></p>
 			  </div>
 			  <?php if(is_array($felghzs)): $i = 0; $__LIST__ = $felghzs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Feig/Index');?>?id=<?php echo ($val['id']); ?>">
 						<div class="col-md-3 col-sm-6">
 						  <div class="team animated cent" data-animation="fadeInUp" data-animation-delay="0" id="cent">
   							<div class="team-photo">
-  							  <img src="/officialweb<?php echo ($val['fghzimg']); ?>" alt="">
+  							  <img src="<?php echo ($val['fghzimg']); ?>" alt="">
   							</div>
   							<div class="team-info">
   							  <h4><?php echo ($val['fghz']); ?></h4>
@@ -239,14 +239,14 @@
  <?php if($indexshowlist["rrhzshow"] == 1 ): ?><section id="team" class="team-index">
     <div class="container">
       <div class="section-title">
-        <img src="/officialweb/Public/qiantai/images/RFlinker_Logo.png">
+        <img src="/Public/qiantai/images/RFlinker_Logo.png">
         <p><?php echo ($indexshowlist["rrhzname"]); ?></p>
       </div>
 	  <?php if(is_array($rrzs)): $i = 0; $__LIST__ = $rrzs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Rflinker/Index');?>?id=<?php echo ($val['id']); ?>">
 			  <div class="col-md-3 col-sm-6">
 				<div class="team animated rf-cent" data-animation="fadeInUp" data-animation-delay="0">
 				  <div class="team-photo">
-					<img src="/officialweb<?php echo ($val['rrimg']); ?>" alt="">
+					<img src="<?php echo ($val['rrimg']); ?>" alt="">
 				  </div>
 				  <div class="team-info">
 					 <h4><?php echo ($val['rflinkerhz']); ?></h4>
@@ -275,7 +275,7 @@
 					  <div class="col-md-3 col-sm-6">
 						<div class="team animated" data-animation="fadeInUp" data-animation-delay="0">
 						  <div class="team-photo">
-							<img src="/officialweb<?php echo ($val['ftimg']); ?>" alt="">
+							<img src="<?php echo ($val['ftimg']); ?>" alt="">
 						  </div>
 						  <div class="team-info">
 							<h4><?php echo ($val['ftname']); ?></h4>
@@ -299,7 +299,7 @@
 
 	  <?php if(is_array($iyimg)): $i = 0; $__LIST__ = $iyimg;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Vocationlistmain/index');?>?id=<?php echo ($vo['id']); ?>">
 					  <li class="mix graphic mix_all">
-						<img src="/officialweb<?php echo ($vo['imgiy']); ?>" alt="">
+						<img src="<?php echo ($vo['imgiy']); ?>" alt="">
 					  </li>
 			  </a><?php endforeach; endif; else: echo "" ;endif; ?>
     </ul>
@@ -399,13 +399,13 @@
 
 </div>
 
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/flexslider.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/owl.carousel.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/mixitup.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.validation.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/flexslider.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/mixitup.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.validation.js"></script>
 <script type="text/javascript" >
 jQuery.extend(jQuery.validator.messages, {
     required: "必填信息",
@@ -427,19 +427,19 @@ jQuery.extend(jQuery.validator.messages, {
     min: jQuery.validator.format("请输入一个最小为 {0} 的值")
 });
 </script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
 
 <!-- Main JS File -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/main.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/main.js"></script>
 <!--下拉搜索JS-->
-<script src="/officialweb/Public/qiantai/js/aircity.js"></script>
+<script src="/Public/qiantai/js/aircity.js"></script>
 <!--下方滚动js-->
-<script src="/officialweb/Public/qiantai/js/scrollfix.js"></script>
+<script src="/Public/qiantai/js/scrollfix.js"></script>
 <!--layer-mobile.js-->
-<script src="/officialweb/Public/qiantai/layer/mobile/layer.js"></script>
+<script src="/Public/qiantai/layer/mobile/layer.js"></script>
 <script>
 $("#facebook").click(function(){
-  var mycontent='<img src="/officialweb/Public/qiantai/images/erweima.jpg">';
+  var mycontent='<img src="/Public/qiantai/images/erweima.jpg">';
   layer.open({
     style: 'border:none;width:auto;height:auto;padding:0px 0px;',
     content:mycontent
@@ -508,7 +508,7 @@ $("#facebook").click(function(){
 
                   $.ajax({
                     type:"POST",
-                    url:"/officialweb/index.php/Home/Index/email",
+                    url:"/index.php/Home/Index/email",
                     dataType: "json",
                     data:$("#contactus").serialize(),
                     success: function(data){

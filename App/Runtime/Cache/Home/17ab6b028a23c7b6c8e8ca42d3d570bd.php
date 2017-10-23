@@ -10,18 +10,18 @@
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond./officialweb/Public/qiantai/js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond./Public/qiantai/js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/flexslider.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/new.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css">
 
 </head>
 <body>
@@ -36,7 +36,7 @@
           <span class="icon-bar"></span>
         </button>
         <div id="logo">
-          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/officialweb/Public/qiantai/images/logo.png" alt=""></a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/Public/qiantai/images/logo.png" alt=""></a>
         </div>
       </div>
       <div class="hidden-xs">
@@ -74,8 +74,8 @@
           <li><a href="<?php echo U('Index/Index');?>" <?php if($style_change == Index): ?>class="hbgcolor"<?php endif; ?> ><?php echo (L("head_index")); ?></a></li>
           <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor dropdown-toggle" data-toggle="dropdown"<?php endif; ?>><?php echo (L("head_product")); ?></a>
             <ul class="dropdown-menu" id="dropdown">
-                    <li><a href="<?php echo U('Rflinker/Index');?>">rflinker</a></li>
-                    <li><a href="<?php echo U('Feig/Index');?>">feig</a></li>
+                    <li><a href="<?php echo U('Rflinker/Index');?>">Rflinker</a></li>
+                    <li><a href="<?php echo U('Feig/Index');?>">Feig</a></li>
             </ul>
           </li>
           <li class="visible-xs"><a href="#">rflinker</a></li>
@@ -170,25 +170,25 @@
 </div>
   
 <!-- Scripts -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/flexslider.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/owl.carousel.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/mixitup.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.validation.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/flexslider.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/mixitup.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.validation.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
 
 <!-- Main JS File -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/main.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/main.js"></script>
 <!--下拉搜索JS-->
-<script src="/officialweb/Public/qiantai/js/aircity.js"></script>
+<script src="/Public/qiantai/js/aircity.js"></script>
 <!--下方滚动js-->
-<script src="/officialweb/Public/qiantai/js/scrollfix.js"></script>
-<script src="/officialweb/Public/qiantai/layer/mobile/layer.js"></script>
+<script src="/Public/qiantai/js/scrollfix.js"></script>
+<script src="/Public/qiantai/layer/mobile/layer.js"></script>
 <script>
 $("#facebook").click(function(){
-  var mycontent='<img src="/officialweb/Public/qiantai/images/erweima.jpg">';
+  var mycontent='<img src="/Public/qiantai/images/erweima.jpg">';
   layer.open({
     style: 'border:none;width:auto;height:auto;padding:0px 0px;',
     content:mycontent
@@ -206,7 +206,7 @@ $("#facebook").click(function(){
 	  
       $.ajax({
 	     type:"GET",
-	     url:"/officialweb/index.php/Home/Vocationlist/getlist/p/"+page,
+	     url:"/index.php/Home/Vocationlist/getlist/p/"+page,
 		 dataType:"json",
 		 success:function(data){
 		 console.log(data);
@@ -220,7 +220,7 @@ $("#facebook").click(function(){
 				    $('#jz').css('display','none');
 				  }
 			    
-			       html += '<div class="col-md-6 col-sm-6"><a href="<?php echo U('Vocationlistmain/index');?>?id='+v.id+'"><div class="team team-vocationlist animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="1500"><div class="team-photo"><img src="/officialweb'+v.imgiy+'" alt=""></div><div class="team-info"><h4 class="text-center vocation-list-name-color">'+v.nameiy+'</h4></div></div></a></div>'; 
+			       html += '<div class="col-md-6 col-sm-6"><a href="<?php echo U('Vocationlistmain/index');?>?id='+v.id+'"><div class="team team-vocationlist animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="1500"><div class="team-photo"><img src="'+v.imgiy+'" alt=""></div><div class="team-info"><h4 class="text-center vocation-list-name-color">'+v.nameiy+'</h4></div></div></a></div>'; 
 			 });
 			
 		

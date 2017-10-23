@@ -358,7 +358,7 @@
 										<div class="col-sm-9">
 										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($link['felgcnhzname'] == $val['cn_fghz']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['cn_fghz']); ?>"> <?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($cnhzname == $val['cn_fghz']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['cn_fghz']); ?>"> <?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -374,7 +374,7 @@
 										<div class="col-sm-9">
 										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($link['felgcntypename'] == $val['cn_fgtypename']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['cn_fgtypename']); ?>"> <?php echo ($val['cn_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($cntypename == $val['cn_fgtypename']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['cn_fgtypename']); ?>"> <?php echo ($val['cn_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -469,7 +469,7 @@
 										<div class="col-sm-9">
 										<select name="felgenhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($link['felgenhzname'] == $val['en_fghz']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['en_fghz']); ?>"> <?php echo ($val['en_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option <?php if($enhzname == $val['en_fghz']): ?>selected="selected"<?php endif; ?> value ="<?php echo ($val['en_fghz']); ?>"> <?php echo ($val['en_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -485,7 +485,7 @@
 										<div class="col-sm-9">
 										<select name="felgentype" id="enfelgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option  <?php if($link['felgentypename'] == $val['en_fgtypename']): ?>selected="selected"<?php endif; ?>  value ="<?php echo ($val['en_fgtypename']); ?>"> <?php echo ($val['en_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option  <?php if($entypename == $val['en_fgtypename']): ?>selected="selected"<?php endif; ?>  value ="<?php echo ($val['en_fgtypename']); ?>"> <?php echo ($val['en_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												

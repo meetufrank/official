@@ -10,19 +10,19 @@
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond./officialweb/Public/qiantai/js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond./Public/qiantai/js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/flexslider.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/style.css?id=2">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/style.css?id=2">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?id=2">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?id=2">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/new.css?v=1.0">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css?v=1.0">
 </head>
 <body>
  <!-- Header -->
@@ -36,7 +36,7 @@
           <span class="icon-bar"></span>
         </button>
         <div id="logo">
-          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/officialweb/Public/qiantai/images/logo.png" alt=""></a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/Public/qiantai/images/logo.png" alt=""></a>
         </div>
       </div>
       <div class="hidden-xs">
@@ -104,77 +104,44 @@
 <div class="scrollable product-scrollable" id="scrollable">
   <div class="container-fluid p-container-fluid">
     <div class="row" id="product-intro">
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Kategorie f<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 1</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 2</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Anwendung <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Roll-, Sektional- und Falttore</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie Roll-, Sektional- und Falttore</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie Roll-, Sektional- und Falttore</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Kategorie f<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 1</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 2</a>
-                </div>
-            </div>
-        </div>
+            <!-- 频率类型 -->
+			<?php if(is_array($hztype_arr)): $i = 0; $__LIST__ = $hztype_arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-xs-12 product-float">
+								<div class="product-dropdown">
+										<a href="#" title="Produkte nach Kategorie" class="prda" id="<?php echo ($vo['hz']['id']); ?>"><?php echo ($vo['hz']['hzname']); ?><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+									<div class="product-dropdown-inner">
+										<?php if(is_array($vo['type'])): $i = 0; $__LIST__ = $vo['type'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$voer): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Feighztype/index');?>?typeid=<?php echo ($voer['id']); ?>&fid=<?php echo ($voer['hzid']); ?>" title="Produkte nach Kategorie" id="<?php echo ($voer['id']); ?>"><?php echo ($voer['fgtypename']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+									</div>
+								</div>	
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
-<!--     <div class="row" id="breadcrumb">
-      <div class="col-lg-8 col-md-8 col-xs-12">
-        <ul class="breadcrumb">
-            <li class="active sub "><a href="#" title="Home" class="active sub ">Home</a></li>
-            <li class="active sub"><a href="#" title="Produkte" class="active sub">Produkte</a></li>
-            <li class="active sub"><a href="#" title="Controller" class="active sub">Controller</a></li>
-            <li class="active current "><a href="#" title="Kategorie" class="active current ">Kategorie</a></li>
-        </ul>
-      </div>
-    </div> -->
+
+	
+	
+	
     <div class="panels">
         <div class="panel-group" id="accordion">
-          <div class="panel panel-default my-panel-heading">
-            <div class="panel-heading">
-              <h2 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" 
-                   data-target="#collapseOne">
-                   Steuerungen mit Frequenzumrichter 
-                </a>
-              </h2>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
-                <iframe src="/officialweb/Public/qiantai/swiper/swiper.html" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default my-panel-heading">
-            <div class="panel-heading">
-              <h2 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" 
-                   data-target="#collapseTwo">
-                   Steuerungen mit Frequenzumrichter 
-                </a>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <iframe src="/officialweb/Public/qiantai/swiper/swiper.html" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
-              </div>
-            </div>
-          </div>
+		
+		     <?php if(is_array($hztypes_arr)): $i = 0; $__LIST__ = $hztypes_arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel panel-default my-panel-heading">
+					<div class="panel-heading">
+					  <h2 class="panel-title">
+						<a id="<?php echo ($vo['type']['id']); ?>" data-toggle="collapse" data-parent="#accordion" 
+						   data-target="#<?php echo (str_replace(' ','',$vo['type']['fgtypename'])); ?>">
+						   <?php echo ($vo['type']['fgtypename']); ?>
+						</a>
+					  </h2>
+					</div>
+					<div id="<?php echo (str_replace(' ','',$vo['type']['fgtypename'])); ?>" class="panel-collapse collapse">
+					  <div class="panel-body">
+					    <div class="panel-body">
+                              <iframe src="<?php echo U('Swiper/index');?>?typeid=<?php echo ($vo['type']['id']); ?>&fid=<?php echo ($vo['type']['hzid']); ?>" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+					  </div>
+					</div>
+				  </div><?php endforeach; endif; else: echo "" ;endif; ?> 
+			
+			
+
+	   
         </div>
     </div>
   </div>
@@ -227,23 +194,23 @@
 
 </div>
 <!-- Scripts -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/flexslider.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/owl.carousel.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/mixitup.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.validation.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/flexslider.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/mixitup.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.validation.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
 
 <!-- Main JS File -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/main.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/main.js"></script>
 <!--下拉搜索JS-->
-<script src="/officialweb/Public/qiantai/js/aircity.js"></script>
-<script src="/officialweb/Public/qiantai/layer/mobile/layer.js"></script>
+<script src="/Public/qiantai/js/aircity.js"></script>
+<script src="/Public/qiantai/layer/mobile/layer.js"></script>
 <script>
 $("#facebook").click(function(){
-  var mycontent='<img src="/officialweb/Public/qiantai/images/erweima.jpg">';
+  var mycontent='<img src="/Public/qiantai/images/erweima.jpg">';
   layer.open({
     style: 'border:none;width:auto;height:auto;padding:0px 0px;',
     content:mycontent
@@ -253,7 +220,7 @@ $("#facebook").click(function(){
 </script>
 
 <!--下方滚动js-->
-<script src="/officialweb/Public/qiantai/js/scrollfix.js"></script>
+<script src="/Public/qiantai/js/scrollfix.js"></script>
 
 
 <script type="text/javascript">

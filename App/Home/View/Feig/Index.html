@@ -44,77 +44,50 @@
 <div class="scrollable product-scrollable" id="scrollable">
   <div class="container-fluid p-container-fluid">
     <div class="row" id="product-intro">
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Kategorie f<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 1</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 2</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Anwendung <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Roll-, Sektional- und Falttore</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie Roll-, Sektional- und Falttore</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie Roll-, Sektional- und Falttore</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-xs-12 product-float">
-            <div class="product-dropdown">
-                <a href="#" title="Produkte nach Kategorie" class="prda">Produkte nach Kategorie f<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-                <div class="product-dropdown-inner">
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 1</a>
-                    <a href="#" title="Produkte nach Kategorie">Produkte nach Kategorie 2</a>
-                </div>
-            </div>
-        </div>
+            <!-- 频率类型 -->
+			<volist name="hztype_arr" id="vo">		  		 
+						<div class="col-lg-4 col-xs-12 product-float">
+								<div class="product-dropdown">
+										<a href="#" title="Produkte nach Kategorie" class="prda" id="{$vo['hz']['id']}">{$vo['hz']['hzname']}<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+									<div class="product-dropdown-inner">
+										<volist name="vo['type']" id="voer">	
+											<a href="{:U('Feighztype/index')}?typeid={$voer['id']}&fid={$voer['hzid']}" title="Produkte nach Kategorie" id="{$voer['id']}">{$voer['fgtypename']}</a> 
+										</volist>
+									</div>
+								</div>	
+						</div>	
+          </volist>
     </div>
-<!--     <div class="row" id="breadcrumb">
-      <div class="col-lg-8 col-md-8 col-xs-12">
-        <ul class="breadcrumb">
-            <li class="active sub "><a href="#" title="Home" class="active sub ">Home</a></li>
-            <li class="active sub"><a href="#" title="Produkte" class="active sub">Produkte</a></li>
-            <li class="active sub"><a href="#" title="Controller" class="active sub">Controller</a></li>
-            <li class="active current "><a href="#" title="Kategorie" class="active current ">Kategorie</a></li>
-        </ul>
-      </div>
-    </div> -->
+
+	
+	
+	
     <div class="panels">
         <div class="panel-group" id="accordion">
-          <div class="panel panel-default my-panel-heading">
-            <div class="panel-heading">
-              <h2 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" 
-                   data-target="#collapseOne">
-                   Steuerungen mit Frequenzumrichter 
-                </a>
-              </h2>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
-                <iframe src="__PUBLIC__/qiantai/swiper/swiper.html" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default my-panel-heading">
-            <div class="panel-heading">
-              <h2 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" 
-                   data-target="#collapseTwo">
-                   Steuerungen mit Frequenzumrichter 
-                </a>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                <iframe src="__PUBLIC__/qiantai/swiper/swiper.html" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
-              </div>
-            </div>
-          </div>
+		
+		     <volist name="hztypes_arr" id="vo">
+				  <div class="panel panel-default my-panel-heading">
+					<div class="panel-heading">
+					  <h2 class="panel-title">
+						<a id="{$vo['type']['id']}" data-toggle="collapse" data-parent="#accordion" 
+						   data-target="#{$vo['type']['fgtypename']|str_replace=' ','',###}">
+						   {$vo['type']['fgtypename']}
+						</a>
+					  </h2>
+					</div>
+					<div id="{$vo['type']['fgtypename']|str_replace=' ','',###}" class="panel-collapse collapse">
+					  <div class="panel-body">
+					    <div class="panel-body">
+                              <iframe src="{:U('Swiper/index')}?typeid={$vo['type']['id']}&fid={$vo['type']['hzid']}" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+					  </div>
+					</div>
+				  </div>
+			</volist> 
+			
+			
+
+	   
         </div>
     </div>
   </div>

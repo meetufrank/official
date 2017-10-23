@@ -343,11 +343,34 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 									<form class="form-horizontal" id="form" method="post" action="<?php echo U('update');?>">
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 选择FELG中文频率 </label>
+										<div class="col-sm-9">
+											<select id="cn_hzid" name="cn_hzid" class="col-xs-10 col-sm-5" onclick="quselect()">
+											    <option value ="0">请选择</option>
+												<?php if(is_array($hz_list)): $i = 0; $__LIST__ = $hz_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['id']); ?>"><?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+											</select>											
+										</div>
+									</div>
+									
+									
 									<div class="space-4"></div>
 									<div class="form-group">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG类型中文 </label>
 										<div class="col-sm-9">
 											<input type="text" name="cn_fgtypename" id="title" placeholder="FELG类型中文" class="col-xs-10 col-sm-5" value="">
+										</div>
+									</div>
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 选择FELG英文频率 </label>
+										<div class="col-sm-9">
+											<select id="en_hzid" name="en_hzid" class="col-xs-10 col-sm-5" onclick="quselect()">
+											    <option value ="0">请选择</option>
+												<?php if(is_array($hz_list)): $i = 0; $__LIST__ = $hz_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['id']); ?>"><?php echo ($val['en_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+											</select>											
 										</div>
 									</div>
 

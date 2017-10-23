@@ -75,7 +75,7 @@
 
 		  <!-- CONTROLLER_NAME -->
           <li><a href="<?php echo U('Index/Index?lang=ch-cn');?>"  id="china">中文  </a></li>
-          <li><a href="#">丨</a></li>
+          <li><a href="#" style="pointer-events: none">丨</a></li>
           <li><a href="<?php echo U('Index/Index?lang=en-us');?>"   id="english">EN</a></li>
         </ul>
       </div>
@@ -103,7 +103,14 @@
 
 
           <li><a href="<?php echo U('Index/Index');?>" <?php if($style_change == Index): ?>class="hbgcolor"<?php endif; ?> ><?php echo (L("head_index")); ?></a></li>
-          <li><a href="<?php echo U('Feig/Index');?>" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_product")); ?></a></li>
+          <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor dropdown-toggle" data-toggle="dropdown"<?php endif; ?>><?php echo (L("head_product")); ?></a>
+            <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="<?php echo U('Rflinker/Index');?>">Rflinker</a></li>
+                    <li><a href="<?php echo U('Feig/Index');?>">Feig</a></li>
+            </ul>
+          </li>
+          <li class="visible-xs"><a href="#">rflinker</a></li>
+          <li class="visible-xs"><a href="#">feig</a></li>
           <li><a href="<?php echo U('Vocationlist/Index');?>" <?php if($style_change == Vocationlist): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_Industry")); ?></a></li>
           <li><a href="<?php echo U('Codeinput/Index');?>" <?php if($style_change == Codeinput OR $style_change == Supportservices): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_support")); ?></a></li>
           <li><a href="<?php echo U('Aboutus/Index');?>" <?php if($style_change == Aboutus): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_about")); ?></a></li>
@@ -111,7 +118,6 @@
       </div>
     </div>
   </header>
-
 
   <!-- End Header -->
 

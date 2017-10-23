@@ -10,35 +10,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 				<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/bootstrap.css" />
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/font-awesome.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/bootstrap.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-fonts.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace-fonts.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-ie.css" />
+		  <link rel="stylesheet" href="/Public/qwadmin/css/ace-ie.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="/zhanggw/Public/qwadmin/js/ace-extra.js"></script>
+		<script src="/Public/qwadmin/js/ace-extra.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="/zhanggw/Public/qwadmin/js/html5shiv.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/respond.js"></script>
+		<script src="/Public/qwadmin/js/html5shiv.js"></script>
+		<script src="/Public/qwadmin/js/respond.js"></script>
 		<![endif]-->
    </head>
 
@@ -89,7 +89,7 @@
 						</li>
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php if( $user["head"] == '' ): ?>/zhanggw/Public/qwadmin/avatars/avatar2.png<?php else: ?>/zhanggw<?php echo ($user["head"]); endif; ?>" alt="<?php echo ($user["user"]); ?>" />
+								<img class="nav-user-photo" src="<?php if( $user["head"] == '' ): ?>/Public/qwadmin/avatars/avatar2.png<?php else: ?><?php echo ($user["head"]); endif; ?>" alt="<?php echo ($user["user"]); ?>" />
 								<span class="user-info">
 									<small>欢迎光临，</small>
 									<?php echo ($user["user"]); ?>
@@ -348,9 +348,9 @@
 									<div class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG中文频率 </label>
 										<div class="col-sm-9">
-										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
+										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5" onclick="cnhz()">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['cn_fghz']); ?>"> <?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['id']); ?>"> <?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -366,7 +366,6 @@
 										<div class="col-sm-9">
 										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['cn_fgtypename']); ?>"> <?php echo ($val['cn_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -463,9 +462,9 @@
 									<div class="form-group" id="enfelgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文频率 </label>
 										<div class="col-sm-9">
-										<select name="felgenhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										<select name="enfelgcnhz" onclick="enhz()" id="enfelgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['en_fghz']); ?>"> <?php echo ($val['en_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										        <?php if(is_array($listhz)): $i = 0; $__LIST__ = $listhz;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['id']); ?>"> <?php echo ($val['en_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -479,9 +478,8 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文类型 </label>
 										<div class="col-sm-9">
-										<select name="felgentype" id="enfelgcntype" class="col-xs-10 col-sm-5">
-										        <option value ="0">请选择</option>
-										        <?php if(is_array($listtype)): $i = 0; $__LIST__ = $listtype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['en_fgtypename']); ?>"> <?php echo ($val['en_fgtypename']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+										<select name="enfelgcntype"  id="enfelgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>										       
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -626,64 +624,120 @@
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 		</script>
-		<script src="/zhanggw/Public/qwadmin/js/bootstrap.js"></script>
+		<script src="/Public/qwadmin/js/bootstrap.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<script charset="utf-8" src="/zhanggw/Public/kindeditor/kindeditor-min.js"></script>
-		<script charset="utf-8" src="/zhanggw/Public/kindeditor/lang/zh_CN.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/bootbox.js"></script>
+		<script charset="utf-8" src="/Public/kindeditor/kindeditor-min.js"></script>
+		<script charset="utf-8" src="/Public/kindeditor/lang/zh_CN.js"></script>
+		<script src="/Public/qwadmin/js/bootbox.js"></script>
 		<!-- ace scripts -->
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.scroller.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.colorpicker.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.fileinput.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.typeahead.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.wysiwyg.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.spinner.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.treeview.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.wizard.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/elements.aside.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.ajax-content.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.touch-drag.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.sidebar.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.sidebar-scroll-1.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.submenu-hover.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.widget-box.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings-rtl.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.settings-skin.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.widget-on-reload.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/ace/ace.searchbox-autocomplete.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.scroller.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.colorpicker.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.fileinput.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.typeahead.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.wysiwyg.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.spinner.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.treeview.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.wizard.js"></script>
+		<script src="/Public/qwadmin/js/ace/elements.aside.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.ajax-content.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.touch-drag.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.sidebar.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.sidebar-scroll-1.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.submenu-hover.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.widget-box.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings-rtl.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.settings-skin.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.widget-on-reload.js"></script>
+		<script src="/Public/qwadmin/js/ace/ace.searchbox-autocomplete.js"></script>
 		<!-- inline scripts related to this page -->
 		<!-- 引入jquery文件 -->
-		<script src="/zhanggw/Public/js/jquery-1.9.1.min.js"></script>
+		<script src="/Public/js/jquery-1.9.1.min.js"></script>
 		
 		
 		
 		<script type="text/javascript">
+		
+	
+		function cnhz(){
+		   
+			//中文hzid
+		    var felgcnhz = $("#felgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"/index.php/Qwadmin/Felgproduct/cnhzaddinfo",
+					dataType:"json",
+					data:{felgcnhz:felgcnhz},
+					success:function(data){
+					   console.log(data);
+					   
+					   
+					    $('#felgcntype').empty();
+					    var htmlf = '';			  
+						$(data.cntype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="cntype'+v.id+'">'+v.cn_fgtypename+'</option>';
+						});
+
+						$('#felgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		function enhz(){
+		   
+			//英文hzid
+		    var enfelgcnhz = $("#enfelgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"/index.php/Qwadmin/Felgproduct/enhzaddinfo",
+					dataType:"json",
+					data:{enfelgcnhz:enfelgcnhz},
+					success:function(data){
+					   console.log(data);
+					   					   
+					    $('#enfelgcntype').empty();
+					    var htmlf = '';			  
+						$(data.entype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="entype'+v.id+'">'+v.en_fgtypename+'</option>';
+						});
+
+						$('#enfelgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		
 		$(function() {
 			var editor = KindEditor.create('textarea[name="cn_ftspec"]',{
-				uploadJson : '/zhanggw/Public/kindeditor/php/upload_json.php',
-				fileManagerJson : '/zhanggw/Public/kindeditor/php/file_manager_json.php',
+				uploadJson : '/Public/kindeditor/php/upload_json.php',
+				fileManagerJson : '/Public/kindeditor/php/file_manager_json.php',
 				allowFileManager : true,
 				afterBlur:function(){this.sync();}  
 				});
 			var editor = KindEditor.create('textarea[name="en_ftspec"]',{
-				uploadJson : '/zhanggw/Public/kindeditor/php/upload_json.php',
-				fileManagerJson : '/zhanggw/Public/kindeditor/php/file_manager_json.php',
+				uploadJson : '/Public/kindeditor/php/upload_json.php',
+				fileManagerJson : '/Public/kindeditor/php/file_manager_json.php',
 				allowFileManager : true,
 				afterBlur:function(){this.sync();}  
 				});

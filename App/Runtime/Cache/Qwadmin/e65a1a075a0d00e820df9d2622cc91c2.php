@@ -346,9 +346,22 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-								<div class="cf">
-									<a class="btn btn-info" href="<?php echo U('add');?>" value="">新增FELG类型</a>
-								</div>
+								
+									
+									<form class="form-inline" action="" method="get">
+										<label class="inline">&nbsp;&nbsp;英文筛选FELG频率：</label>
+											<select name="enorder" class="form-control">
+											     <option value ="0">请选择</option>
+												<?php if(is_array($hz_list)): $i = 0; $__LIST__ = $hz_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value ="<?php echo ($val['id']); ?>"><?php echo ($val['cn_fghz']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+											</select>
+											
+											<button type="submit" class="btn btn-purple btn-sm">
+												<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+												搜索
+											</button>
+											<a class="btn btn-info" href="<?php echo U('add');?>" value="">新增FELG类型</a>
+									</form>
+								
 								<div class="space-4"></div>
 
 								<form id="form" method="post" action="<?php echo U('del');?>">

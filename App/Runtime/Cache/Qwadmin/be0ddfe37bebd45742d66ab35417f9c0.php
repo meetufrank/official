@@ -15,16 +15,16 @@
 	</style>
     <!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
 		</script>
 		<!-- <![endif]-->
 		<!--[if IE]>
 		<script type="text/javascript">
-		 window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
+		 window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
 		</script>
 		<![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 		</script>
 </head>
 
@@ -34,7 +34,7 @@
         <input type="hidden" value="<?php echo ($Height); ?>" name="Height">
         <input type="hidden" value="<?php echo ($BackCall); ?>" name="BackCall">
         <div class="uploadpic">
-		<img id="ImgPr" src="<?php if($Img == ''): ?>/zhanggw/Public/qwadmin/images/nopic.gif<?php else: ?>/zhanggw<?php echo ($Img); endif; ?>"  width="<?php echo ($Width); ?>" height="<?php echo ($Height); ?>">
+		<img id="ImgPr" src="<?php if($Img == ''): ?>/Public/qwadmin/images/nopic.gif<?php else: ?><?php echo ($Img); endif; ?>"  width="<?php echo ($Width); ?>" height="<?php echo ($Height); ?>">
         <div class="uploadtext">上传</div>
 			<div class="inputfile" title="点击上传图片">
 				<input type="file" name="img" id="uploadicon" value="upload"/>

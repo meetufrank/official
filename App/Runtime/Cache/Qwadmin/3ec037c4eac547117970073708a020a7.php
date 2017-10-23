@@ -9,35 +9,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 				<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/bootstrap.css" />
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/font-awesome.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/bootstrap.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-fonts.css" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace-fonts.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/Public/qwadmin/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="/Public/qwadmin/css/ace-part2.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="/zhanggw/Public/qwadmin/css/ace-ie.css" />
+		  <link rel="stylesheet" href="/Public/qwadmin/css/ace-ie.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="/zhanggw/Public/qwadmin/js/ace-extra.js"></script>
+		<script src="/Public/qwadmin/js/ace-extra.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="/zhanggw/Public/qwadmin/js/html5shiv.js"></script>
-		<script src="/zhanggw/Public/qwadmin/js/respond.js"></script>
+		<script src="/Public/qwadmin/js/html5shiv.js"></script>
+		<script src="/Public/qwadmin/js/respond.js"></script>
 		<![endif]-->
    </head>
 
@@ -117,18 +117,18 @@
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='/zhanggw/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='/Public/qwadmin/js/jquery1x.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='/zhanggw/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Public/qwadmin/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- inline scripts related to this page -->

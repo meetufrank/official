@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
 <html>
 <head>
   <title><?php echo (L("title_Product")); ?></title>
@@ -19,52 +19,10 @@
   <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/flexslider.css">
   <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/owl.carousel.css">
   <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?id=1">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?id=2">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css?id=2">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css">
-  <link rel="stylesheet" type="text/css" href="/Public/qiantai/Swiper-3.4.2/dist/css/swiper.css">
-  <!-- Swiper styles -->
-    <style>
-
-    @media (max-width:768px) {
-      .swiper-container {
-        height:200px;
-      }
-
-	   <?php if(is_array($productlistimgss)): $i = 0; $__LIST__ = $productlistimgss;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['fwshowpc'] == 1): ?>.swiper-slide-<?php echo ($i); ?>{
-                            background-image:url(<?php echo ($vo['flashviewphone']); ?>);
-                        }
-				   <?php else: endif; endforeach; endif; else: echo "" ;endif; ?>
-
-
-
-    }
-    @media (min-width:768px) {
-      .swiper-container {
-        height:600px;
-      }
-	   <?php if(is_array($productlistimgss)): $i = 0; $__LIST__ = $productlistimgss;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['fwshowpc'] == 1): ?>.swiper-slide-<?php echo ($i); ?>{
-							background-image:url(<?php echo ($vo['flashviewpc']); ?>);
-						}
-				   <?php else: endif; endforeach; endif; else: echo "" ;endif; ?>
-
-
-    }
-    html, body {
-        position: relative;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        max-width: 100%;
-    }
-    .swiper-slide {
-        background-position: center;
-        background-size:100% 100%;
-    }
-    </style>
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css?v=1.0">
 </head>
 <body>
  <!-- Header -->
@@ -86,7 +44,7 @@
 
 		  <!-- CONTROLLER_NAME -->
           <li><a href="<?php echo U('Index/Index?lang=ch-cn');?>"  id="china">中文  </a></li>
-          <li><a href="#">丨</a></li>
+          <li><a href="#" style="pointer-events: none">丨</a></li>
           <li><a href="<?php echo U('Index/Index?lang=en-us');?>"   id="english">EN</a></li>
         </ul>
       </div>
@@ -114,7 +72,14 @@
 
 
           <li><a href="<?php echo U('Index/Index');?>" <?php if($style_change == Index): ?>class="hbgcolor"<?php endif; ?> ><?php echo (L("head_index")); ?></a></li>
-          <li><a href="<?php echo U('Feig/Index');?>" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_product")); ?></a></li>
+          <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor dropdown-toggle" data-toggle="dropdown"<?php endif; ?>><?php echo (L("head_product")); ?></a>
+            <ul class="dropdown-menu" id="dropdown">
+                    <li><a href="<?php echo U('Rflinker/Index');?>">Rflinker</a></li>
+                    <li><a href="<?php echo U('Feig/Index');?>">Feig</a></li>
+            </ul>
+          </li>
+          <li class="visible-xs"><a href="#">rflinker</a></li>
+          <li class="visible-xs"><a href="#">feig</a></li>
           <li><a href="<?php echo U('Vocationlist/Index');?>" <?php if($style_change == Vocationlist): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_Industry")); ?></a></li>
           <li><a href="<?php echo U('Codeinput/Index');?>" <?php if($style_change == Codeinput OR $style_change == Supportservices): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_support")); ?></a></li>
           <li><a href="<?php echo U('Aboutus/Index');?>" <?php if($style_change == Aboutus): ?>class="hbgcolor"<?php endif; ?>><?php echo (L("head_about")); ?></a></li>
@@ -122,7 +87,6 @@
       </div>
     </div>
   </header>
-
 
   <!-- End Header -->
 
@@ -137,78 +101,51 @@
     </div>
   </div>
   <!-- End Preloader -->
-<div class="scrollable" id="scrollable">
-  <!-- Swiper -->
+<div class="scrollable product-scrollable" id="scrollable">
+  <div class="container-fluid p-container-fluid">
+    <div class="row" id="product-intro">
+            <!-- 频率类型 -->
+			<?php if(is_array($hztype_arr)): $i = 0; $__LIST__ = $hztype_arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 col-xs-12 product-float">
+								<div class="product-dropdown">
+										<a href="#" title="Produkte nach Kategorie" class="prda" id="<?php echo ($vo['hz']['id']); ?>"><?php echo ($vo['hz']['hzname']); ?><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+									<div class="product-dropdown-inner">
+										<?php if(is_array($vo['type'])): $i = 0; $__LIST__ = $vo['type'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$voer): $mod = ($i % 2 );++$i;?><a href="#" title="Produkte nach Kategorie" id="<?php echo ($voer['id']); ?>"><?php echo ($voer['fgtypename']); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
+									</div>
+								</div>	
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
+    </div>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
+	
+	
+	
+    <div class="panels">
+        <div class="panel-group" id="accordion">
+		
+		     <?php if(is_array($hztypes_arr)): $i = 0; $__LIST__ = $hztypes_arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="panel panel-default my-panel-heading">
+					<div class="panel-heading">
+					  <h2 class="panel-title">
+						<a id="<?php echo ($vo['type']['id']); ?>" data-toggle="collapse" data-parent="#accordion" 
+						   data-target="#<?php echo (str_replace(' ','',$vo['type']['fgtypename'])); ?>">
+						   <?php echo ($vo['type']['fgtypename']); ?>
+						</a>
+					  </h2>
+					</div>
+					<div id="<?php echo (str_replace(' ','',$vo['type']['fgtypename'])); ?>" class="panel-collapse collapse">
+					  <div class="panel-body">
+					    <div class="panel-body">
+                              <iframe src="<?php echo U('index');?>?typeid=<?php echo ($vo['type']['id']); ?>&fid=<?php echo ($vo['type']['hzid']); ?>" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+					  </div>
+					</div>
+				  </div><?php endforeach; endif; else: echo "" ;endif; ?> 
+			
+			
 
-			   <?php if(is_array($productlistimgss)): $i = 0; $__LIST__ = $productlistimgss;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo['fwshowpc'] == 1): ?><div class="swiper-slide swiper-slide-<?php echo ($i); ?>"></div>
-				   <?php else: endif; endforeach; endif; else: echo "" ;endif; ?>
+	   
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-white"></div>
-
     </div>
-<!-- FEIG产品 -->
-<section id="portfolio" class="product-list-section">
-    <div class="productlist-section-title">
-        <a href="#" class="product-a"><span class="product-header-class cdk-class-one"><?php echo (L("felg_range")); ?></span></a>
-        <a href="<?php echo U('Rflinker/Index');?>" class="product-a"><span class="product-header-class cdk-class-two"><?php echo (L("felg_rflinker")); ?></span></a>
-        <div style="clear: both;"></div>
-    </div>
-
-	  <!-- 频率 -->
-    <div class="nav-section-title nac-feig-title">
-      <p class="product-p-border"><?php echo (L("felg_hztext")); ?></p>
-        <ul id="filters" class="nav">
-		   <?php if(is_array($felghzselect)): $i = 0; $__LIST__ = $felghzselect;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li onclick="felghz(1,'<?php echo ($val['fghz']); ?>',<?php echo ($val['id']); ?>)"  id="filter<?php echo ($val['id']); ?>"
-			class="filter hz
-			   <?php if($indexhzname == '' and $i == 1): ?>active yi<?php elseif($indexhzname == $val['fghz']): ?>active yi<?php endif; ?>
-			   " data-filter="<?php echo ($val['fghz']); ?>">
-			   <?php echo ($val['fghz']); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
-    </div>
-
-	  <!-- 类型 -->
-    <div class="nav-section-title nac-feig-title">
-    <p class="product-p-border"><?php echo (L("felg_typetext")); ?></p>
-      <ul id="filter_s" class="nav">
-	        <?php if(is_array($yitype)): $i = 0; $__LIST__ = $yitype;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li id="filtertype<?php echo ($val['id']); ?>"   class="filter type typeyiclass" onclick = "hztypeptyi('<?php echo ($hzyiselect); ?>','<?php echo ($val['fgtypename']); ?>')" data-filter="<?php echo ($val['fgtypename']); ?>"><?php echo ($val['fgtypename']); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
-      </ul>
-    </div>
-
-
-    <!-- 产品 -->
-    <ul id="works-list" class="nav">
-
-         <?php if(is_array($felgptyiselect)): $i = 0; $__LIST__ = $felgptyiselect;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Productdetails/index');?>?type=1&&id=<?php echo ($val['id']); ?>">
-                <li class="mix graphic mix_all" style="display: inline-block; opacity: 1;">
-                   <div class="team team-feig animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0">
-                    <div class="team-photo"><img src="<?php echo ($val['ftimg']); ?>" alt=""></div>
-                    <div class="team-info">
-                       <h4><?php echo ($val['ftname']); ?></h4>
-                       <p><?php echo ($val['fttitle']); ?></p>
-                    </div>
-                   </div>
-                </li>
-              </a><?php endforeach; endif; else: echo "" ;endif; ?>
-
-
-
-
-    </ul>
-
-
-    <?php if($icount > 8 ): ?><div id="jzgdyi" onclick="jiazaiyi('<?php echo ($hzyiselect); ?>')" class="section-title">
-             <h2>More</h2>
-        </div>
-    <?php else: endif; ?>
-
-
-
-  </section>
-  <footer>
+  </div>
+<footer>
     <div class="container">
       <div class="col-lg-2 col-md-2 col-xs-12 footer-icons">
         <ul class="social">
@@ -270,8 +207,6 @@
 <script type="text/javascript" src="/Public/qiantai/js/main.js"></script>
 <!--下拉搜索JS-->
 <script src="/Public/qiantai/js/aircity.js"></script>
-<!--swiper-->
-<script src="/Public/qiantai/Swiper-3.4.2/dist/js/swiper.min.js"></script>
 <script src="/Public/qiantai/layer/mobile/layer.js"></script>
 <script>
 $("#facebook").click(function(){
@@ -283,509 +218,6 @@ $("#facebook").click(function(){
   $(".layui-m-layercont").css({ padding: "0px 0px" });
 });
 </script>
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        spaceBetween: 30,
-    });
-</script>
-
-
-
-
-
-
-
-<script>
-
-  //默认页码2
-  var pageyi = 1;
-
-
-  //频率产品的加载更多
-  function jiazaiyi(name){
-
-
-       pageyi++;
-
-       //频率名称
-       $hzname = name;
-
-       $p = pageyi;
-
-
-       $.ajax({
-            type:"post",
-            url:"/index.php/Home/Feig/felghzyijiazai",
-            dataType:"json",
-            data:{p:$p,hzname:$hzname},
-            success:function(data){
-            console.log(data);
-                  var hzname = "";
-                  var html = "";
-                  var count = 0;
-                  $(data).each(function(k,v){
-
-                                       html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                       count = v.count;
-                                         if(pageyi >= count){
-                                           $('#jzgdyi').css('display','none');
-                                         }
-                                       var name = "'"+hzname+"'";
-                  });
-                 //循环完参数后赋值给容器
-                 $('#works-list').append(html);
-
-            }
-
-
-       });
-
-   }
-
-
-
-  //频率类型筛选产品一次
-  function hztypeptyi(hz,type){
-      //频率名称
-      $hz = hz;
-
-
-
-      //类型名称
-      $type = type;
-
-      $.ajax({
-          url:"/index.php/Home/Feig/hztypeptyi",
-          type:'post',
-          dataType:'json',
-          data:{felghztype:$type,felghzname:$hz},
-          async:true,
-          success:function(data){
-                                  console.log(data);
-                                   $(".yi").addClass("active");
-                                  //把产品div元素删除
-                                  $('#works-list').empty();
-
-                                  //加载当前类型,清空上一个加载更多
-                                  $("#jzgd").empty();
-                                  $("#jzgdtype").empty();
-                                  $("#jzgdyi").empty();
-
-                                   //追加当前频率的所有产品
-                                   var html = "";
-                                   //刷选的产品总数
-                                   var count = 0;
-
-                                   //频率名称
-                                   var hzname = "";
-
-                                   //类型名称
-                                   var type = "";
-                                   $(data).each(function(k,v){
-
-                                       html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+''+v.hzname+''+v.typename+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                       count = v.count;
-
-                                       hzname = "'"+v.hzname+"'";
-                                       typename = "'"+v.typename+"'";
-
-                                   });
-
-
-
-                                    if(count > 8){
-                                          $("#works-list").after('<div id="hztypeyipt" onclick="jiazaihptztypeyi('+hzname+','+typename+')" class="section-title"><h2>To Load More</h2></div>');
-                                     }
-                                   $('#works-list').append(html);
-
-
-
-                                   //类型点击1.加上样式
-                                  $(".typeyiclass").click(function(){
-                                             $(".typeyiclass").removeClass("active");
-                                             $(this).addClass("active");
-                                  })
-
-
-
-
-
-
-
-          }
-      });//ajax结束
-
-
-
-  }
-
-
-  //第一次加载频率类型产品刷选,加载更多
-     //默认页码2
-  var pageyihztypept = 1;
-
-
-  //频率产品的加载更多
-  function jiazaihptztypeyi(hzname,typename){
-
-       pageyihztypept++;
-
-       //频率名称
-       $hzname = hzname;
-
-
-      //加载当前类型,清空频率的加载更多
-      $("#jzgd").empty();
-      //加载当频率的类型产品,清空上一个加载更多
-      $("#hztypeyipt").empty();
-
-
-
-       //类型名称
-       $typename = typename;
-
-       $p = pageyihztypept;
-
-
-       $.ajax({
-            type:"post",
-            url:"/index.php/Home/Feig/jiazaihptztypes",
-            dataType:"json",
-            data:{p:$p,hzname:$hzname,typename:$typename},
-            success:function(data){
-                    console.log(data);
-                    var hzname = "";
-                    var html = "";
-                    var count = 0;
-                    $(data).each(function(k,v){
-
-                                         html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                         count = v.count;
-                                           if(pagetype >= count){
-                                             $('#hztypeyipt').css('display','none');
-                                           }
-                                         var name = "'"+hzname+"'";
-                    });
-                   //循环完参数后赋值给容器
-                   $('#works-list').append(html);
-
-
-
-            }
-
-
-       });
-
-   }
-
-  function felghz(type,name,id){
-
-    //type类型 1为felg  2为rflinker
-     $type = type;
-
-   //name  hz名称
-   $name = name;
-     //刷选对应的类型
-     $.ajax({
-      url:"/index.php/Home/Feig/felghztypepick",
-      type:'post',
-      dataType:'json',
-      data:{felghztype:$type,felghzname:$name},
-      async:true,
-      success:function(data){
-                   console.log(data);
-
-                   //把类型div元素删除
-                   $('#filter_s').empty();
-
-
-                   //判断类型是否为空
-                   if(data == null || data == ''){
-                      $('#filter_s').html('<li>暂无类型</li>');
-                   }
-
-
-                   //追加当前频率的类型
-                   var html = "";
-
-                       $(data).each(function(k,v){
-
-                           html += '<li onclick="typeptall(1,\''+v.fgtypename+'\',\''+v.hzname+'\')" class="typeclass" data-filter='+v.fgtypename+'>'+v.fgtypename+'</li>';
-
-
-                       });
-
-                        $('#filter_s').append(html);
-
-
-                         //类型点击1.加上样式
-                         $(".typeclass").click(function(){
-                                   $(".typeclass").removeClass("active");
-                                   $(this).addClass("active");
-                         })
-
-             }
-     });
-
-
-
-                //根据频率,查找对应的所有产品
-                 $.ajax({
-                          url:"/index.php/Home/Feig/felghzall",
-                          type:'post',
-                          dataType:'json',
-                          data:{felghztype:$type,felghzname:$name},
-                          async:true,
-                          success:function(data){
-                             console.log(data);
-
-                                  //加上选中样式,删除掉兄弟节点的选中样式
-                                  $('#filter'+id).addClass('active').siblings().removeClass('active');
-
-                                  //把产品div元素删除
-                                  $('#works-list').empty();
-
-
-                                  //加载当前类型,清空上一个加载更多
-                                  $("#jzgd").empty();
-                                  $("#jzgdtype").empty();
-                                  $("#jzgdyi").empty();
-
-                                  //判断产品是否为空
-                                   if(data == null || data == ''){
-                                      $('#works-list').html('<a><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"></div><div class="team-info"><h4></h4><p>暂无产品</p></div></div></li></a>');
-                                   }
-
-                                   //追加当前频率的所有产品
-                                   var html = "";
-                                   //刷选的产品总数
-                                   var count = 0;
-                                   //当前频率名称
-                                   var hzname = "";
-                                   $(data).each(function(k,v){
-
-                                       html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                       count = v.count;
-                                       var name = "'"+hzname+"'";
-                                   });
-
-                                   if(count > 8){
-
-                                          $("#works-list").after('<div id="jzgd" onclick="jiazai(\''+name+'\')" class="section-title"><h2>To Load More</h2></div>');
-                                     }
-
-                                   $('#works-list').append(html);
-
-
-                            }
-                         });//ajax结束
-
-
-
-	   }//函数结束
-
-
-
-
-  //默认页码2
-  var page = 1;
-
-
-  //频率产品的加载更多
-  function jiazai(name){
-
-
-       page++;
-
-       //频率名称
-       $hzname = name;
-
-       $p = page;
-
-
-       $.ajax({
-            type:"post",
-            url:"/index.php/Home/Feig/Hzgetlist",
-            dataType:"json",
-            data:{p:$p,hzname:$hzname},
-            success:function(data){
-            console.log(data);
-                  var hzname = "";
-                  var html = "";
-                  var count = 0;
-                  $(data).each(function(k,v){
-
-                                       html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                       count = v.count;
-                                         if(page >= count){
-                                           $('#jzgd').css('display','none');
-                                         }
-                                       var name = "'"+hzname+"'";
-                  });
-                 //循环完参数后赋值给容器
-                 $('#works-list').append(html);
-
-            }
-
-
-       });
-
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   function typeptall(type,typename,hzname){
-            //type类型 1为felg  2为rflinker
-            $type = type;
-
-            //类型名称
-            $name = typename;
-
-
-            //频率名称
-            $hzname = hzname;
-
-
-
-            //alert("类型,我是类型");
-             //根据频率,查找对应的所有产品
-                 $.ajax({
-                          url:"/index.php/Home/Feig/typeptall",
-                          type:'post',
-                          dataType:'json',
-                          data:{felghztype:$type,felgtypename:$name,felghzname:$hzname},
-                          async:true,
-                          success:function(data){
-                             console.log(data);
-                                      //把产品div元素删除
-                                  $('#works-list').empty();
-
-
-                                  //加载当前类型,清空频率的加载更多
-                                  $("#jzgd").empty();
-                                  //加载当频率的类型产品,清空上一个加载更多
-                                  $("#jzgdtype").empty();
-                                  $("#jzgdyi").empty();
-
-                                  //刷选的产品总数
-                                   var count = 0;
-
-                                  //判断产品是否为空
-                                   if(data == null || data == ''){
-                                      $('#works-list').html('<a><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"></div><div class="team-info"><h4></h4><p>暂无产品</p></div></div></li></a>');
-                                   }
-
-                                   //追加当前频率的所有产品
-                                   var html = "";
-
-
-
-                                   //刷选的产品总数
-                                   var count = 0;
-                                   $(data).each(function(k,v){
-
-                                       html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                       count = v.count;
-                                       var hzname = "'"+hzname+"'";
-                                       var typename = "'"+typename+"'";
-                                   });
-
-
-                                    if(count > 8){
-
-                                          $("#works-list").after('<div id="jzgdtype" onclick="jiazaitype(\''+hzname+'\',\''+typename+'\')" class="section-title"><h2>To Load More</h2></div>');
-                                     }
-
-                                   $('#works-list').append(html);
-
-
-                            }
-                });//ajax结束
-
-
-
-   }//函数结束
-
-
-
-
-
-    //默认页码2
-  var pagetype = 1;
-
-
-  //频率产品的加载更多
-  function jiazaitype(hzname,typename){
-
-
-       pagetype++;
-
-       //频率名称
-       $hzname = hzname;
-
-
-      //加载当前类型,清空频率的加载更多
-      $("#jzgd").empty();
-      //加载当频率的类型产品,清空上一个加载更多
-      $("#jzgdtype").empty();
-
-
-
-       //类型名称
-       $typename = typename;
-
-       $p = pagetype;
-
-
-       $.ajax({
-            type:"post",
-            url:"/index.php/Home/Feig/HzTypegetlist",
-            dataType:"json",
-            data:{p:$p,hzname:$hzname,typename:$typename},
-            success:function(data){
-                    console.log(data);
-                    var hzname = "";
-                    var html = "";
-                    var count = 0;
-                    $(data).each(function(k,v){
-
-                                         html += '<a href="<?php echo U('Productdetails/index');?>?type=1&&id='+v.id+'"><li class="mix graphic mix_all" style="display: inline-block; opacity: 1;"><div class="team animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="0"><div class="team-photo"><img src="'+v.ftimg+'" alt=""></div><div class="team-info"><h4>'+v.ftname+'</h4><p>'+v.fttitle+'</p></div></div></li></a>';
-                                         count = v.count;
-                                           if(pagetype >= count){
-                                             $('#jzgdtype').css('display','none');
-                                           }
-                                         var name = "'"+hzname+"'";
-                    });
-                   //循环完参数后赋值给容器
-                   $('#works-list').append(html);
-
-            }
-
-
-       });
-
-   }
-
-
-</script>
-
-
 
 <!--下方滚动js-->
 <script src="/Public/qiantai/js/scrollfix.js"></script>
@@ -799,9 +231,18 @@ $("#facebook").click(function(){
   }else if(language=='en_'){
     $("#english").addClass('header-pc-color');
     $("#mobileenglish").addClass('header-mobile-color');
+    // var parenth = document.getElementById('dropdownparent').offsetWidth;
+    // document.getElementById('dropdown').style.width=parenth+"px";
   }
 </script>
-
-
+<script type="text/javascript">
+  $(".prda").click(function(){
+        if($(".product-dropdown-inner").hasClass('open')){
+            $(".product-dropdown-inner").removeClass('open');
+        }else{
+            $(".product-dropdown-inner").addClass('open');
+        }
+    });
+</script>
 </body>
 </html>

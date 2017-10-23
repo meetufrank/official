@@ -10,19 +10,19 @@
 
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond./officialweb/Public/qiantai/js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond./Public/qiantai/js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/flexslider.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/owl.carousel.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/style.css">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/css/new.css">
-  <link rel="stylesheet" type="text/css" href="/officialweb/Public/qiantai/Swiper-3.4.2/dist/css/swiper.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/css/new.css">
+  <link rel="stylesheet" type="text/css" href="/Public/qiantai/Swiper-3.4.2/dist/css/swiper.css">
   <!-- Swiper styles -->
     <style>
     @media (max-width:768px) {
@@ -31,8 +31,8 @@
       }
 
       .swiper-slide-02{
-        background-image:url(/officialweb/Public/qiantai/images/640X2001.jpg);
-/*        background-image:url(/officialweb/Public/qiantai/images/1920X6003.jpg);*/
+        background-image:url(/Public/qiantai/images/640X2001.jpg);
+/*        background-image:url(/Public/qiantai/images/1920X6003.jpg);*/
       }
       .code-section{
         padding-top: 40px;
@@ -46,10 +46,10 @@
         /*height:510px*/
       }
       .swiper-slide-01{
-        background-image:url(/officialweb/Public/qiantai/images/1920X6002.jpg);
+        background-image:url(/Public/qiantai/images/1920X6002.jpg);
       }
       .swiper-slide-02{
-        background-image:url(/officialweb/Public/qiantai/images/1920X6003.jpg);
+        background-image:url(/Public/qiantai/images/1920X6003.jpg);
       }
     }
     html, body {
@@ -112,7 +112,7 @@
           <span class="icon-bar"></span>
         </button>
         <div id="logo">
-          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/officialweb/Public/qiantai/images/logo.png" alt=""></a>
+          <a class="navbar-brand" href="<?php echo U('Index/Index');?>"><img src="/Public/qiantai/images/logo.png" alt=""></a>
         </div>
       </div>
       <div class="hidden-xs">
@@ -150,8 +150,8 @@
           <li><a href="<?php echo U('Index/Index');?>" <?php if($style_change == Index): ?>class="hbgcolor"<?php endif; ?> ><?php echo (L("head_index")); ?></a></li>
           <li class="dropdown visible-lg visible-md visible-sm" id="dropdownparent"><a href="#" <?php if($style_change == Feig OR $style_change == Rflinker): ?>class="hbgcolor dropdown-toggle" data-toggle="dropdown"<?php endif; ?>><?php echo (L("head_product")); ?></a>
             <ul class="dropdown-menu" id="dropdown">
-                    <li><a href="<?php echo U('Rflinker/Index');?>">rflinker</a></li>
-                    <li><a href="<?php echo U('Feig/Index');?>">feig</a></li>
+                    <li><a href="<?php echo U('Rflinker/Index');?>">Rflinker</a></li>
+                    <li><a href="<?php echo U('Feig/Index');?>">Feig</a></li>
             </ul>
           </li>
           <li class="visible-xs"><a href="#">rflinker</a></li>
@@ -212,7 +212,7 @@
 						<div class="team-info-code">
 							<h4 style="font-weight: bold;color: #02AAF1; text-align: center;"><?php echo ($val['stname']); ?></h4>
 							<p style="text-align: center;">
-							  <a href="/officialweb/Public/Uploads/<?php echo ($val['file']); ?>" target="view_window">
+							  <a href="/Public/Uploads/<?php echo ($val['file']); ?>" target="view_window">
 								<button type="button" class="sup-downloadbutton"><?php echo (L("code_download")); ?><i class="fa fa-download"></i></button>
 							  </a>
 							</p>
@@ -271,22 +271,22 @@
 
 </div>
 <!-- Scripts -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/flexslider.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/owl.carousel.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.appear.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/mixitup.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.validation.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="/officialweb/Public/qiantai/layer/layer.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/flexslider.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/mixitup.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.validation.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="/Public/qiantai/layer/layer.js"></script>
 
 <!-- Main JS File -->
-<script type="text/javascript" src="/officialweb/Public/qiantai/js/main.js"></script>
+<script type="text/javascript" src="/Public/qiantai/js/main.js"></script>
 <!--下拉搜索JS-->
-<script src="/officialweb/Public/qiantai/js/aircity.js"></script>
+<script src="/Public/qiantai/js/aircity.js"></script>
 <!--swiper-->
-<script src="/officialweb/Public/qiantai/Swiper-3.4.2/dist/js/swiper.min.js"></script>
+<script src="/Public/qiantai/Swiper-3.4.2/dist/js/swiper.min.js"></script>
 <!-- banner Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -295,10 +295,10 @@
         spaceBetween: 30,
     });
 </script>
-<script src="/officialweb/Public/qiantai/layer/mobile/layer.js"></script>
+<script src="/Public/qiantai/layer/mobile/layer.js"></script>
 <script>
 $("#facebook").click(function(){
-  var mycontent='<img src="/officialweb/Public/qiantai/images/erweima.jpg">';
+  var mycontent='<img src="/Public/qiantai/images/erweima.jpg">';
   layer.open({
     style: 'border:none;width:auto;height:auto;padding:0px 0px;',
     content:mycontent
@@ -338,7 +338,7 @@ $("#facebook").click(function(){
   
 	
 	$.ajax({
-		   url:"/officialweb/index.php/Home/Codeinput/code",
+		   url:"/index.php/Home/Codeinput/code",
 		   type:"post",
 		   dataType:"json",
 		   data:{name:$dowusername,pwd:$dowuserpwd},
@@ -358,7 +358,7 @@ $("#facebook").click(function(){
 
 </script>
 <!--下方滚动js-->
-<script src="/officialweb/Public/qiantai/js/scrollfix.js"></script>
+<script src="/Public/qiantai/js/scrollfix.js"></script>
 
 <script type="text/javascript">
   var language = "<?php echo (L("language")); ?>";
