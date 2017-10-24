@@ -40,7 +40,7 @@
 									<div  class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文频率 </label>
 										<div class="col-sm-9">
-										<select name="rflinkercnhzname" id="felgcnhz" class="col-xs-10 col-sm-5">
+										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
 												  <option <if condition="$link['rflinkercnhzname'] == $val['cn_rflinkerhz']">selected="selected"</if> value ="{$val['cn_rflinkerhz']}"> {$val['cn_rflinkerhz']}</option>
@@ -58,7 +58,7 @@
 									<div class="form-group" id="felgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文类型 </label>
 										<div class="col-sm-9">
-										<select name="rflinkercntypename" id="felgcntype" class="col-xs-10 col-sm-5">
+										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
 												    <option <if condition="$link['rflinkercntypename'] == $val['cn_rflinkertypename']">selected="selected"</if> value ="{$val['cn_rflinkertypename']}"> {$val['cn_rflinkertypename']}</option>
@@ -158,7 +158,7 @@
 									<div class="form-group" id="enfelgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文频率 </label>
 										<div class="col-sm-9">
-										<select name="rflinkerenhzname" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										<select name="enfelgcnhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
 												  <option <if condition="$link['rflinkerenhzname'] == $val['en_rflinkerhz']">selected="selected"</if> value ="{$val['en_rflinkerhz']}"> {$val['en_rflinkerhz']}</option>
@@ -176,7 +176,7 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文类型 </label>
 										<div class="col-sm-9">
-										<select name="rflinkerentypename" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										<select name="enfelgcntype" id="enfelgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
 												    <option <if condition="$link['rflinkerentypename'] == $val['en_rflinkertypename']">selected="selected"</if> value ="{$val['en_rflinkertypename']}"> {$val['en_rflinkertypename']}</option>

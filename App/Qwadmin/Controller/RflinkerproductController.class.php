@@ -49,6 +49,27 @@ class RflinkerproductController extends ComController {
 		//print_r($listtype);exit;
 		$this -> display();
 	}
+	
+	
+	public function cnhzaddinfo(){
+		$rflinkercnhz = $_POST['rflinkerenhz'];
+	    $entype = M('rflinkertype')->where("en_hzid = $rflinkercnhz")->order('rrtypesort asc')->select();
+		$data['cntype'] = $cntype;
+		echo json_encode($data);
+	}
+	
+	
+	public function enhzaddinfo(){
+		$rflinkerenhz = $_POST['rflinkerenhz'];
+	    $entype = M('rflinkertype')->where("en_hzid = $rflinkerenhz")->order('rrtypesort asc')->select();
+		$data['entype'] = $entype;
+		echo json_encode($data);
+	}
+	
+	
+	
+	
+	
 	//新增或修改FELG产品
 	public function edit($id=null){
 

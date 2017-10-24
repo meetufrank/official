@@ -9,22 +9,90 @@ class RflinkertypeController extends ComController {
 	//Rflinker系列产品
 	public function index(){
 		
-		$list = M('rflinkertype')->order('rrtypesort')->select();
+		/* $list = M('rflinkertype')->order('rrtypesort')->select();
 		$this->assign('list',$list);
+		$this -> display(); */
+		
+		
+		$hz_list = M('rflinkerhz')->order('rrsort asc')->select();
+		$this -> assign('hz_list',$hz_list);
+		
+		//print_r($hz_list);exit;
+	
+		$enorder = isset($_GET['enorder'])?intval($_GET['enorder']):0;
+		
+		if($enorder != 0){
+			$map = 'en_hzid = '.$enorder;
+		}else{
+			$map = "";
+		}
+		
+		$count= M('rflinkertype')->where($map)->count();// 查询满足要求的总记录数
+		//print_r($count);exit;
+        $Page= new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show= $Page->show();// 分页显示输出
+
+        $result=D('rflinkertype')->where($map)->limit($Page->firstRow.','.$Page->listRows)->order("rrtypesort asc")->select();
+							
+        $this->assign('page',$show);
+        $this -> assign('enorder',$enorder);
+        $this->assign('list',$result);
+		//print_r($order);exit;
 		$this -> display();
+		
+		
 	}
 	//新增Rflinker系列产品
 	public function add(){
+	    $hz_list = M('rflinkerhz')->order('rrsort asc')->select();
+		//print_r($hz_list);exit;
+        $this -> assign('hz_list',$hz_list);
 
 		$this -> display();
 	}
 	//新增或修改Rflinker系列产品
 	public function edit($id=null){
 		
-		$id = intval($id);
+		
 		$link = M('rflinkertype')->where('id='.$id)->find();
+		$cnhzid = $link['cn_hzid'];
+		$enhzid = $link['en_hzid'];
+		
+		$hz_list = M('rflinkerhz')->order('rrsort asc')->select();
+		$this -> assign('hz_list',$hz_list);
+		
+		//中文频率
+		$Model = M('rflinkertype');
+		$hzcn = $Model
+		->join("qw_rflinkerhz as z ON qw_rflinkertype.cn_hzid = z.id")
+		->where("qw_rflinkertype.id = ".$id)
+		->select(); 
+		$hzcnid = $hzcn[0]['id'];
+		$hzcnfghz = $hzcn[0]['cn_rflinkerhz'];
+		$this->assign('hzcnid',$hzcnid);
+		$this->assign('hzcnfghz',$hzcnfghz);
+		
+		
+		//英文频率hzcn
+		$Model = M('rflinkertype');
+		$hzen = $Model
+		->join("qw_rflinkerhz as z ON qw_rflinkertype.en_hzid = z.id")
+		->where('qw_rflinkertype.id = '.$id)
+		->select();
+        
+	    $hzenid = $hzen[0]['id'];
+		$hzenfghz = $hzen[0]['en_rflinkerhz'];
+		
+		//print_r($hzen);exit;
+		$this->assign('hzenid',$hzenid);
+		$this->assign('hzenfghz',$hzenfghz);
+		
 		$this->assign('link',$link);
 		$this -> display();
+		
+		
+		
+		
 	}
 	//删除Rflinker系列产品
 	public function del(){
@@ -52,26 +120,11 @@ class RflinkertypeController extends ComController {
 		$id = intval($id);
 	    
 		$data['cn_rflinkertypename'] = I('post.cn_rflinkertypename','','strip_tags');
-		
-		//类型中文名称不能为空
-		if($data['cn_rflinkertypename'] == ''){
-			$this -> error("类型中文名称不能为空!!!");
-		}
-		
-		//类型中文名称不能重复
-		$typecnnamewhere = "cn_rflinkertypename = "."'".$_POST['cn_rflinkertypename']."'";
-		$typecnname = M('rflinkertype')->where($typecnnamewhere)->count();
-		
-		
 		$data['en_rflinkertypename'] = I('post.en_rflinkertypename','','strip_tags');
-		//类型英文名称不能为空
-		if($data['en_rflinkertypename'] == ''){
-			$this -> error("类型英文名称不能为空!!!");
-		}
 		
-		//英文类型名称不能重复
-		$typeennamewhere ="en_rflinkertypename = "."'".$_POST['en_rflinkertypename']."'";
-		$typeenname = M('rflinkertype')->where($typeennamewhere)->count();
+		
+	    $data['cn_hzid'] = I('post.cn_hzid','','strip_tags');
+		$data['en_hzid'] = I('post.en_hzid','','strip_tags');
 		
 		
 		

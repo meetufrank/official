@@ -26,7 +26,7 @@ class FelgtypeController extends ComController {
         $result=D('felgtype')->where($map)->limit($Page->firstRow.','.$Page->listRows)->order("fgtypesort asc")->select();
 							
         $this->assign('page',$show);
-
+        $this -> assign('enorder',$enorder);
         $this->assign('list',$result);
 		//print_r($order);exit;
 		$this -> display();
