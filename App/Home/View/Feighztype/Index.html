@@ -75,7 +75,7 @@
 						</a>
 					  </h2>
 					</div>
-					<div id="{$vo['type']['fgtypename']|str_replace=' ','',###}" class="panel-collapse collapse">
+					<div id="{$vo['type']['fgtypename']|str_replace=' ','',###}" class="panel-collapse collapse <if condition="$typeid == $vo['type']['id']">in</if>">
 					  <div class="panel-body">
 					    <div class="panel-body">
                               <iframe src="{:U('Swiper/index')}?typeid={$vo['type']['id']}&fid={$vo['type']['hzid']}" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>

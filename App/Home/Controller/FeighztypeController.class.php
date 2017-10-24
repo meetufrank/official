@@ -71,7 +71,7 @@ class FeighztypeController extends ComController {
 		
 		/* print_r($typeid);
 		print_r($fid);exit; */
-		
+		$this -> assign('typeid',$typeid);
 		$this->display(); 
 		
 
