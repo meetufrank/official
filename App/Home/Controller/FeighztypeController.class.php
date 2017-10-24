@@ -3,7 +3,7 @@
 namespace Home\Controller;
 use Think\Controller;
 use Vendor\Page;
-class FeigController extends ComController {
+class FeighztypeController extends ComController {
     public function index(){
 	
         //判断当前语言
@@ -36,24 +36,14 @@ class FeigController extends ComController {
 		$this -> assign('hztype_arr',$hztype_arr);
 		
 		
-		
-		//页面第一次加载,第一个频率下的类型和产品
-	    //频率
-		//取出频率第一条id
-		$felghz = M('felghz');
-		$selecthzyi ="id,".$language."fghz as fghz";
-		$hzyiwhere = "$languagefghz";
-		$hzyi = $felghz->order('fghzsort')->where($hzyiwhere)->limit(1)->field($selecthzyi)->select();
-		$hzyiid = $hzyi[0]['id'];
-		$hzyifghz = $hzyi[0]['fghz'];
-		$this -> assign('hzyiid',$hzyiid);
-	    $this -> assign('hzyifghz',$hzyifghz);
+		$typeid = $_GET['typeid'];
+		$fid = $_GET['fid'];
 		
 		
-		//取出第一个频率下的所有类型
+		//取出该频率下的所有类型
 		$felgtype = M('felgtype');
 		$selecttypeyi ="id,".$language."fgtypename as fgtypename,".$language."hzid as hzid";
-		$typeyiwhere =$language."hzid = $hzyiid";
+		$typeyiwhere =$language."hzid = $fid";
 		$typeyi = $felgtype->order('fgtypesort')->where($typeyiwhere)->field($selecttypeyi)->select();
 		
 
@@ -76,7 +66,11 @@ class FeigController extends ComController {
 		}
 		//print_r($hztypes_arr);exit;
 		$this -> assign('hztypes_arr',$hztypes_arr);
-	    
+		
+		
+		
+		/* print_r($typeid);
+		print_r($fid);exit; */
 		
 		$this->display(); 
 		

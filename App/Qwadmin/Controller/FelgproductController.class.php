@@ -38,7 +38,7 @@ class FelgproductController extends ComController {
 		//FELG产品频率
         $listhz = M('felghz')->order('fghzsort asc')->select();
 		$this->assign('listhz',$listhz);
-
+		
 
 		//FELG产品类型
 		$listtype = M('felgtype')->order('fgtypesort asc')->select();
@@ -46,6 +46,25 @@ class FelgproductController extends ComController {
 		/* print_r($listhz);exit; */
 		$this -> display();
 	}
+	
+	public function cnhzaddinfo(){
+		$felgcnhz = $_POST['felgcnhz'];
+		$cntype = M('felgtype')->where("cn_hzid = $felgcnhz")->order('fgtypesort asc')->select();
+		$data['cntype'] = $cntype;
+		echo json_encode($data);
+	}
+	
+	public function enhzaddinfo(){
+		$enfelgcnhz = $_POST['enfelgcnhz'];
+	    $entype = M('felgtype')->where("en_hzid = $enfelgcnhz")->order('fgtypesort asc')->select();
+		$data['entype'] = $entype;
+		echo json_encode($data);
+	}
+	
+	
+	
+	
+	
 	//新增或修改FELG产品
 	public function edit($id=null){
 
@@ -61,6 +80,32 @@ class FelgproductController extends ComController {
 
 		$link = M('felgproduct')->where('id='.$id)->find();
 		$this->assign('link',$link);
+		
+		//中文频率
+		$cnhzid = $link['cn_hzid'];
+		$cnhznamearray = M('felghz')->where("id = $cnhzid")->select();
+		$cnhzname = $enhznamearray[0]['cn_fghz'];
+		$this->assign('cnhzname',$cnhzname);
+			
+		//英文频率
+		$enhzid = $link['en_hzid'];
+		$enhznamearray = M('felghz')->where("id = $enhzid")->select();
+		$enhzname = $enhznamearray[0]['en_fghz'];
+		$this->assign('enhzname',$enhzname);
+		
+		
+		//中文类型
+		$cntypeid = $link['cn_tid'];
+		$cntypenamearray = M('felgtype')->where("id = $cntypeid")->select();
+		$cntypename = $cntypenamearray[0]['cn_fgtypename'];
+		$this->assign('cntypename',$cntypename);
+		
+		//英文类型
+	    $entypeid = $link['en_tid'];
+		$entypenamearray = M('felgtype')->where("id = $entypeid")->select();
+		$entypename = $entypenamearray[0]['en_fgtypename'];
+		$this->assign('entypename',$entypename);
+		//print_r($entypename);exit;
 
 		$this -> display();
 	}
@@ -91,19 +136,17 @@ class FelgproductController extends ComController {
 
 
 		//频率
-		$data['felgcnhzname'] = I('post.felgcnhz','','strip_tags');
-		$data['felgenhzname'] = I('post.felgenhz','','strip_tags');
-
+		$data['cn_hzid'] = I('post.felgcnhz','','strip_tags');
+		$data['en_hzid'] = I('post.enfelgcnhz','','strip_tags');
+		
+		//类型id
+        $data['cn_tid'] = I('post.felgcntype','','strip_tags');
+		$data['en_tid'] = I('post.enfelgcntype','','strip_tags');
 
 		$hzcn = I('post.felgcnhz','','strip_tags');
 
 
-
-
-		//类型
-		$data['felgcntypename'] = I('post.felgcntype','','strip_tags');
-		$data['felgentypename'] = I('post.felgentype','','strip_tags');
-
+	
 		//产品名称
 		$data['cn_ftname'] = I('post.cn_ftname','','strip_tags');
 		$data['en_ftname'] = I('post.en_ftname','','strip_tags');

@@ -39,10 +39,10 @@
 									<div class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG中文频率 </label>
 										<div class="col-sm-9">
-										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
+										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5" onclick="cnhz()">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option value ="{$val['cn_fghz']}"> {$val['cn_fghz']}</option>
+												  <option value ="{$val['id']}"> {$val['cn_fghz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -59,9 +59,6 @@
 										<div class="col-sm-9">
 										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <volist name="listtype" id="val">
-												    <option value ="{$val['cn_fgtypename']}"> {$val['cn_fgtypename']}</option>
-												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -158,10 +155,10 @@
 									<div class="form-group" id="enfelgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文频率 </label>
 										<div class="col-sm-9">
-										<select name="felgenhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										<select name="enfelgcnhz" onclick="enhz()" id="enfelgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option value ="{$val['en_fghz']}"> {$val['en_fghz']}</option>
+												  <option value ="{$val['id']}"> {$val['en_fghz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -176,11 +173,8 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> FELG英文类型 </label>
 										<div class="col-sm-9">
-										<select name="felgentype" id="enfelgcntype" class="col-xs-10 col-sm-5">
-										        <option value ="0">请选择</option>
-										        <volist name="listtype" id="val">
-												    <option value ="{$val['en_fgtypename']}"> {$val['en_fgtypename']}</option>
-												</volist>
+										<select name="enfelgcntype"  id="enfelgcntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>										       
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -314,6 +308,62 @@
 		
 		
 		<script type="text/javascript">
+		
+	
+		function cnhz(){
+		   
+			//中文hzid
+		    var felgcnhz = $("#felgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/cnhzaddinfo",
+					dataType:"json",
+					data:{felgcnhz:felgcnhz},
+					success:function(data){
+					   console.log(data);
+					   
+					   
+					    $('#felgcntype').empty();
+					    var htmlf = '';			  
+						$(data.cntype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="cntype'+v.id+'">'+v.cn_fgtypename+'</option>';
+						});
+
+						$('#felgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		function enhz(){
+		   
+			//英文hzid
+		    var enfelgcnhz = $("#enfelgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/enhzaddinfo",
+					dataType:"json",
+					data:{enfelgcnhz:enfelgcnhz},
+					success:function(data){
+					   console.log(data);
+					   					   
+					    $('#enfelgcntype').empty();
+					    var htmlf = '';			  
+						$(data.entype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="entype'+v.id+'">'+v.en_fgtypename+'</option>';
+						});
+
+						$('#enfelgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		
 		$(function() {
 			var editor = KindEditor.create('textarea[name="cn_ftspec"]',{
 				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',

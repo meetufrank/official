@@ -46,7 +46,7 @@
 										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option <if condition="$link['felgcnhzname'] == $val['cn_fghz']">selected="selected"</if> value ="{$val['cn_fghz']}"> {$val['cn_fghz']}</option>
+												  <option <if condition="$cnhzname == $val['cn_fghz']">selected="selected"</if> value ="{$val['cn_fghz']}"> {$val['cn_fghz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -64,7 +64,7 @@
 										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
-												    <option <if condition="$link['felgcntypename'] == $val['cn_fgtypename']">selected="selected"</if> value ="{$val['cn_fgtypename']}"> {$val['cn_fgtypename']}</option>
+												    <option <if condition="$cntypename == $val['cn_fgtypename']">selected="selected"</if> value ="{$val['cn_fgtypename']}"> {$val['cn_fgtypename']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -161,7 +161,7 @@
 										<select name="felgenhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option <if condition="$link['felgenhzname'] == $val['en_fghz']">selected="selected"</if> value ="{$val['en_fghz']}"> {$val['en_fghz']}</option>
+												  <option <if condition="$enhzname == $val['en_fghz']">selected="selected"</if> value ="{$val['en_fghz']}"> {$val['en_fghz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -179,7 +179,7 @@
 										<select name="felgentype" id="enfelgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
-												    <option  <if condition="$link['felgentypename'] == $val['en_fgtypename']">selected="selected"</if>  value ="{$val['en_fgtypename']}"> {$val['en_fgtypename']}</option>
+												    <option  <if condition="$entypename == $val['en_fgtypename']">selected="selected"</if>  value ="{$val['en_fgtypename']}"> {$val['en_fgtypename']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">

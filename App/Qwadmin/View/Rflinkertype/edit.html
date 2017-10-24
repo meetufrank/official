@@ -34,6 +34,19 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 									<form class="form-horizontal" id="form" method="post" action="{:U('update')}?id={$link.id}">
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 选择RFLINKER中文频率 </label>
+										<div class="col-sm-9">
+											<select id="cn_hzid" name="cn_hzid" class="col-xs-10 col-sm-5" onclick="quselect()">
+											    <option value ="0">请选择</option>
+												<volist name="hz_list" id="val">
+												    <option value ="{$val['id']}" <if condition="$val['id'] eq $hzcnid">selected = "selected"</if>>{$val['cn_rflinkerhz']}</option>
+												</volist>
+											</select>											
+										</div>
+									</div>
+									
 									<div class="space-4"></div>
 									<div class="form-group">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER类型中文 </label>
@@ -41,7 +54,23 @@
 											<input type="text" name="cn_rflinkertypename" id="title" placeholder="RFLINKER类型中文" class="col-xs-10 col-sm-5" value="{$link.cn_rflinkertypename}">
 										</div>
 									</div>
-
+									
+									
+									
+									
+									
+									
+									<div class="form-group">
+										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 选择RFLINKER英文频率 </label>
+										<div class="col-sm-9">
+											<select id="en_hzid" name="en_hzid" class="col-xs-10 col-sm-5" onclick="quselect()">
+											    <option value ="0">请选择</option>
+												<volist name="hz_list" id="val">
+												    <option value ="{$val['id']}" <if condition="$val['id'] eq $hzenid">selected = "selected"</if>>{$val['cn_rflinkerhz']}</option>
+												</volist>
+											</select>											
+										</div>
+									</div>			
 									<div class="space-4"></div>
 									<div class="form-group">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER类型英文 </label>
@@ -49,6 +78,14 @@
 											<input type="text" name="en_rflinkertypename" id="title" placeholder="RFLINKER类型英文" class="col-xs-10 col-sm-5" value="{$link.en_rflinkertypename}">
 										</div>
 									</div>
+									
+									
+									
+									
+
+									
+									
+									
 									
 										
 									<div class="space-4"></div>

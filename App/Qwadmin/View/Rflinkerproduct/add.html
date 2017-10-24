@@ -40,13 +40,13 @@
 								
 												
 									<div class="space-4"></div>
-									<div  class="form-group" id="felgcnhzdiv">
+									<div class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文频率 </label>
 										<div class="col-sm-9">
-										<select name="rflinkercnhzname" id="felgcnhz" class="col-xs-10 col-sm-5">
+										<select name="rflinkercnhz" id="rflinkercnhz" class="col-xs-10 col-sm-5" onclick="cnhz()">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option value ="{$val['cn_rflinkerhz']}"> {$val['cn_rflinkerhz']}</option>
+												  <option value ="{$val['id']}"> {$val['cn_rflinkerhz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -61,11 +61,8 @@
 									<div class="form-group" id="felgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文类型 </label>
 										<div class="col-sm-9">
-										<select name="rflinkercntypename" id="felgcntype" class="col-xs-10 col-sm-5">
-										        <option value ="0">请选择</option>
-										        <volist name="listtype" id="val">
-												    <option value ="{$val['cn_rflinkertypename']}"> {$val['cn_rflinkertypename']}</option>
-												</volist>
+										<select name="rflinkercntype" id="rflinkercntype" class="col-xs-10 col-sm-5">
+										        <option value ="0">请选择</option>										        
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -158,13 +155,13 @@
 									
 									
 									<div class="space-4"></div>
-									<div class="form-group" id="enfelgcnhzdiv">
+									<div class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文频率 </label>
 										<div class="col-sm-9">
-										<select name="rflinkerenhzname" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										<select name="rflinkerenhz" id="rflinkerenhz" class="col-xs-10 col-sm-5" onclick="enhz()">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option value ="{$val['en_rflinkerhz']}"> {$val['en_rflinkerhz']}</option>
+												  <option value ="{$val['id']}"> {$val['en_rflinkerhz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -179,11 +176,8 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文类型 </label>
 										<div class="col-sm-9">
-										<select name="rflinkerentypename" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										<select name="enfelgcntype" id="enfelgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
-										        <volist name="listtype" id="val">
-												    <option value ="{$val['en_rflinkertypename']}"> {$val['en_rflinkertypename']}</option>
-												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
 												
@@ -316,6 +310,60 @@
 		<!-- 引入jquery文件 -->
 		
 	<script type="text/javascript">
+	
+		function cnhz(){
+		   
+			//中文hzid
+		    var rflinkercnhz = $("#rflinkercnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/cnhzaddinfo",
+					dataType:"json",
+					data:{rflinkercnhz:rflinkercnhz},
+					success:function(data){
+					   console.log(data);
+					   
+					   
+					    $('#rflinkercntype').empty();
+					    var htmlf = '';			  
+						$(data.cntype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="cntype'+v.id+'">'+v.cn_rflinkertypename+'</option>';
+						});
+
+						$('#rflinkercntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		function enhz(){
+		   
+			//英文hzid
+		    var rflinkerenhz = $("#rflinkerenhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/enhzaddinfo",
+					dataType:"json",
+					data:{rflinkerenhz:rflinkerenhz},
+					success:function(data){
+					   console.log(data);
+					   					   
+					    $('#enfelgcntype').empty();
+					    var htmlf = '';			  
+						$(data.entype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="entype'+v.id+'">'+v.en_rflinkertypename+'</option>';
+						});
+
+						$('#enfelgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
 		$(function() {
 			var editor = KindEditor.create('textarea[name="en_rrspec"]',{
 				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',

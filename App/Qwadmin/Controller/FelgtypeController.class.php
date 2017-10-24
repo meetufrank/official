@@ -7,14 +7,36 @@ class FelgtypeController extends ComController {
 	
 	//FELG系列产品类型分类
 	public function index(){
+	    $hz_list = M('felghz')->order('fghzsort asc')->select();
+		$this -> assign('hz_list',$hz_list);
+	
+		$enorder = isset($_GET['enorder'])?intval($_GET['enorder']):0;
 		
-		$list = M('felgtype')->order('fgtypesort asc')->select();
-		$this->assign('list',$list);
+		if($enorder != 0){
+			$map = 'en_hzid = '.$enorder;
+		}else{
+			$map = "";
+		}
+		
+		$count= M('felgtype')->where($map)->count();// 查询满足要求的总记录数
+		//print_r($count);exit;
+        $Page= new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+        $show= $Page->show();// 分页显示输出
+
+        $result=D('felgtype')->where($map)->limit($Page->firstRow.','.$Page->listRows)->order("fgtypesort asc")->select();
+							
+        $this->assign('page',$show);
+        $this -> assign('enorder',$enorder);
+        $this->assign('list',$result);
+		//print_r($order);exit;
 		$this -> display();
 	}
 	//新增FELG系列产品类型分类
 	public function add(){
-
+		
+		$hz_list = M('felghz')->order('fghzsort asc')->select();
+		//print_r($hz_list);exit;
+        $this -> assign('hz_list',$hz_list);
 		$this -> display();
 	}
 	//新增或修改FELG系列产品类型分类
@@ -22,6 +44,39 @@ class FelgtypeController extends ComController {
 		
 		$id = intval($id);
 		$link = M('felgtype')->where('id='.$id)->find();
+		$cnhzid = $link['cn_hzid'];
+		$enhzid = $link['en_hzid'];
+		
+		$hz_list = M('felghz')->order('fghzsort asc')->select();
+		$this -> assign('hz_list',$hz_list);
+		
+		//中文频率
+		$Model = M('felgtype');
+		$hzcn = $Model
+		->join("qw_felghz as z ON qw_felgtype.cn_hzid = z.id")
+		->where("qw_felgtype.id = ".$id)
+		->select(); 
+		$hzcnid = $hzcn[0]['id'];
+		$hzcnfghz = $hzcn[0]['cn_fghz'];
+		$this->assign('hzcnid',$hzcnid);
+		$this->assign('hzcnfghz',$hzcnfghz);
+		
+		
+		
+		/* print_r($hzcn[0]['id']);
+		print_r($hzcn[0]['cn_fghz']);exit; */
+		//英文频率hzcn
+		$Model = M('felgtype');
+		$hzen = $Model
+		->join("qw_felghz as z ON qw_felgtype.en_hzid = z.id")
+		->where('qw_felgtype.id = '.$id)
+		->select();
+        
+	    $hzenid = $hzen[0]['id'];
+		$hzenfghz = $hzen[0]['en_fghz'];
+		$this->assign('hzenid',$hzenid);
+		$this->assign('hzenfghz',$hzenfghz);
+		
 		$this->assign('link',$link);
 		$this -> display();
 	}
@@ -51,6 +106,8 @@ class FelgtypeController extends ComController {
 		$id = intval($id);
 		$data['cn_fgtypename'] = I('post.cn_fgtypename','','strip_tags');
 		$data['en_fgtypename'] = I('post.en_fgtypename','','strip_tags');
+	    $data['cn_hzid'] = I('post.cn_hzid','','strip_tags');
+		$data['en_hzid'] = I('post.en_hzid','','strip_tags');
 		$data['fgtypesort'] = I('post.fgtypesort','','strip_tags');
 		
 		if($id){
