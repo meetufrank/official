@@ -23,6 +23,66 @@
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/style.css">
   <!-- new css by wys -->
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/new.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+   <!-- swiper styles -->
+    <style>
+    @media (max-width:768px) {
+      .swiper-container-banner {
+        width: 100%;
+        height:200px;
+      }
+      .swiper-slide-banner{
+        background-image:url('__PUBLIC__/qiantai/images/640X200.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+    }
+    @media (min-width:768px) {
+      .swiper-container-banner{
+        max-width: 1280px;
+        height:340px;
+      }
+      .swiper-slide-banner{
+        background-image:url('__PUBLIC__/qiantai/images/1280X340.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .swiper-pagination-banner .swiper-pagination-bullet{
+          width:12px;
+          height:12px;
+      }
+    }
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-slide-banner{
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    </style>
 </head>
 <body>
  <!-- Header -->
@@ -42,6 +102,16 @@
   </div>
   <!-- End Preloader -->
 <div class="scrollable product-scrollable" id="scrollable">
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-banner"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-banner"></div>
+    </div>
+  <!-- Swiper end -->
+
   <div class="container-fluid p-container-fluid">
     <div class="row" id="product-intro">
             <!-- 频率类型 -->
@@ -91,7 +161,7 @@
         </div>
     </div>
   </div>
-<include file="Public/footer"/>
+  <include file="Public/footer"/>
 </div>
 <!-- Scripts -->
 <script type="text/javascript" src="__PUBLIC__/qiantai/js/jquery.min.js"></script>
@@ -105,6 +175,8 @@
 
 <!-- Main JS File -->
 <script type="text/javascript" src="__PUBLIC__/qiantai/js/main.js"></script>
+<!--swiper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
 <!--下拉搜索JS-->
 <script src="__PUBLIC__/qiantai/js/aircity.js"></script>
 <script src="__PUBLIC__/qiantai/layer/mobile/layer.js"></script>
@@ -142,6 +214,14 @@ $("#facebook").click(function(){
         }else{
             $(".product-dropdown-inner").addClass('open');
         }
+    });
+</script>
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper('.swiper-container-banner', {
+        pagination: '.swiper-pagination-banner',
+        paginationClickable: true,
+        effect: 'fade'
     });
 </script>
 </body>
