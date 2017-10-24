@@ -108,6 +108,8 @@ class FelgtypeController extends ComController {
 		$data['en_fgtypename'] = I('post.en_fgtypename','','strip_tags');
 	    $data['cn_hzid'] = I('post.cn_hzid','','strip_tags');
 		$data['en_hzid'] = I('post.en_hzid','','strip_tags');
+		
+		//print_r($data['en_hzid']);exit;
 		$data['fgtypesort'] = I('post.fgtypesort','','strip_tags');
 		
 		if($id){

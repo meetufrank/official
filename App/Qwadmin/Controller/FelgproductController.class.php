@@ -144,8 +144,10 @@ class FelgproductController extends ComController {
 		$data['en_tid'] = I('post.enfelgcntype','','strip_tags');
 
 		$hzcn = I('post.felgcnhz','','strip_tags');
-
-
+		
+		
+	
+		
 	
 		//产品名称
 		$data['cn_ftname'] = I('post.cn_ftname','','strip_tags');
