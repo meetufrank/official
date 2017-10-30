@@ -276,6 +276,7 @@
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 排序 </label>
 										<div class="col-sm-9">
 											<input type="number" name="rrsort" id="o" placeholder="排序" class="col-xs-10 col-sm-5" value="">
+										
 											<span class="help-inline col-xs-12 col-sm-7">
 												<span class="middle">越小越靠前。</span>
 											</span>
@@ -314,8 +315,7 @@
 		function cnhz(){
 		   
 			//中文hzid
-		    var rflinkercnhz = $("#rflinkercnhz").val();
-			
+
 		    $.ajax({
 					type:"post",
 					url:"__CONTROLLER__/cnhzaddinfo",
@@ -332,7 +332,8 @@
 						});
 
 						$('#rflinkercntype').append(htmlf);
-					  
+						
+						
                     }
 					
 			    });

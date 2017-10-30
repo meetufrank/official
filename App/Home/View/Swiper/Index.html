@@ -58,10 +58,10 @@
 						<div class="swiper-slide">
 							<div class="item">
 								<div class="product-image">
-									<a href="#"><img width="400" height="320" src="__ROOT__{$voer['ftimg']}" class="img-responsive"></a>
+									<a target="_top" href="{:U('Productdetails/index')}?type=1&&id={$voer['id']}"><img width="400" height="320" src="__ROOT__{$voer['ftimg']}" class="img-responsive"></a>
 								</div>
 								<div class="product-info">
-									<div class="product-identifier"><a href="#">{$voer['ftname']}</a></div>
+									<div class="product-identifier"><a target="_top" href="{:U('Productdetails/index')}?type=1&&id={$voer['id']}">{$voer['ftname']}</a></div>
 									<div class="product-name">{$voer['ftitle']}</div>
 								</div>
 							</div>

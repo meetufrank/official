@@ -52,10 +52,12 @@ class RflinkerproductController extends ComController {
 	
 	
 	public function cnhzaddinfo(){
-		$rflinkercnhz = $_POST['rflinkerenhz'];
-	    $entype = M('rflinkertype')->where("en_hzid = $rflinkercnhz")->order('rrtypesort asc')->select();
-		$data['cntype'] = $cntype;
+		$rflinkercnhz = $_POST['rflinkercnhz'];
+		
+	    $entype = M('rflinkertype')->where("cn_hzid = $rflinkercnhz")->order('rrtypesort asc')->select();
+		$data['cntype'] = $entype;
 		echo json_encode($data);
+
 	}
 	
 	
@@ -70,7 +72,7 @@ class RflinkerproductController extends ComController {
 	
 	
 	
-	//新增或修改FELG产品
+	//新增或修改RFLINKER产品
 	public function edit($id=null){
 
 		$id = intval($id);
@@ -86,8 +88,26 @@ class RflinkerproductController extends ComController {
 
 		$link = M('rflinkerproduct')->where('id='.$id)->find();
 		$this->assign('link',$link);
+		
+		
+		//中文频率
+		$cnhzid = $link['cn_hzid'];
+		$cnhznamearray = M('rflinkerhz')->where("id = $cnhzid")->select();
+		$cnhzname = $enhznamearray[0]['cn_rflinkerhz'];
+		$this->assign('cnhzname',$cnhzname);
+			
+		//英文频率
+		$enhzid = $link['en_hzid'];
+
+		$enhznamearray = M('rflinkerhz')->where("id = $enhzid")->select();
+		$enhzname = $enhznamearray[0]['en_rflinkerhz'];
+				//print_r($enhzid);exit;
+		$this->assign('enhzname',$enhzname);
 
 		 //print_r($link);exit;
+		 
+		
+	
 		$this -> display();
 	}
 	//删除FELG产品
@@ -115,7 +135,15 @@ class RflinkerproductController extends ComController {
 	public function update($id=0){
 		$id = intval($id);
 
-
+        //频率
+		$data['cn_hzid'] = I('post.rflinkercnhz','','strip_tags');
+		$data['en_hzid'] = I('post.rflinkercntype','','strip_tags');
+		
+		//类型id
+        $data['cn_tid'] = I('post.rflinkerenhz','','strip_tags');
+		$data['en_tid'] = I('post.enfelgcntype','','strip_tags');
+		
+		
 		//频率
 		$data['rflinkercnhzname'] = I('post.rflinkercnhzname','','strip_tags');
 		$data['rflinkerenhzname'] = I('post.rflinkerenhzname','','strip_tags');
