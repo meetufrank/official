@@ -12,7 +12,8 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.__PUBLIC__/qiantai/js/1.3.0/respond.min.js"></script>
   <![endif]-->
-
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.__PUBLIC__/qiantai/js/1.3.0/respond.min.js"></script>
   <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/font-awesome.min.css">
@@ -114,10 +115,10 @@
 <div class="scrollable" id="scrollable">
   <!-- Backgrounds -->
   <div id="backgrounds">
-    <ul class="slides">
+      <ul class="slides">
 
-	  <volist name="img" id="val">
-	        <if condition="$val['fwshowpc'] neq 2 and $val['flashviewpc'] neq ''">
+	  <volist name="img" id="val"><li><img src="__ROOT__{$val['flashviewpc']}" alt=""></li>
+	         <if condition="$val['fwshowpc'] neq 2 and $val['flashviewpc'] neq ''">
                 <li><img src="__ROOT__{$val['flashviewpc']}" alt=""></li>
 		    </if>
 	  </volist>
