@@ -24,18 +24,18 @@
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/new.css">
   <style type="text/css">
     .cs{
-            width:100%;
-            height:200px;
-            background:rgba(238,238,238,0.8);
-            top:0px;
-            position:absolute;
-            opacity: 0;
-            display: block;
-            font-size: 12px;
-            transition: 0.5s;
-            -webkit-transition: .8s;
-            -moz-transition: .8s;
-            padding-top: 25%;
+        width:100%;
+        height:200px;
+        background:rgba(238,238,238,0.8);
+        top:0px;
+        position:absolute;
+        opacity: 0;
+        display: block;
+        font-size: 12px;
+        transition: 0.5s;
+        -webkit-transition: .8s;
+        -moz-transition: .8s;
+        padding-top: 25%;
         }
         .cent:hover .cs{
             opacity: 1;
@@ -115,20 +115,41 @@
   <!-- Backgrounds -->
   <div id="backgrounds">
     <ul class="slides">
+          <li><img src="__PUBLIC__/qiantai/images/bg/1.jpg" alt=""></li>
+          <li><img src="__PUBLIC__/qiantai/images/02.jpg" alt=""></li>
+          <li><img src="__PUBLIC__/qiantai/images/03.jpg" alt=""></li>
+          <li><img src="__PUBLIC__/qiantai/images/04.jpg" alt=""></li>
+      </ul>
+  </div>
 
-	  <volist name="img" id="val">
+<!-- 	  <volist name="img" id="val">
 	        <if condition="$val['fwshowpc'] neq 2 and $val['flashviewpc'] neq ''">
                 <li><img src="__ROOT__{$val['flashviewpc']}" alt=""></li>
 		    </if>
-	  </volist>
+	  </volist> -->
 
-    </ul>
-  </div>
+
   <!-- End Backgrounds -->
 
 <div id="home">
-
-  <div class="slide-caption">
+<div class="slide-caption">
+      <div class="slide-middle">
+        <div class="slide-intro">
+          <!-- <h3>Welcome</h3>  -->
+        </div>
+        <div id="home-slider" class="flexslider">             
+          <ul class="slides">
+            <li><h1>We are kepler</h1></li>         
+            <li><h1>We are strong</h1></li>
+          </ul>
+        </div>
+        <div class="home-text">
+          <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <a href="#features" class="btn btn-empty">Discover</a> -->
+        </div>
+      </div>
+    </div>
+  <!-- <div class="slide-caption">
 
 			  <div class="slide-middle">
 				<div class="slide-intro">
@@ -150,7 +171,7 @@
 				</div>
 			  </div>
 
-    </div>
+    </div> -->
 
 </div>
 <!-- FEIG产品 -->
