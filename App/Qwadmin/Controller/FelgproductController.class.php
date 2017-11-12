@@ -7,32 +7,126 @@ class FelgproductController extends ComController {
 
 	//FELG产品
 	public function index(){
-		                        $type = I('typeptname');
-								//print_r($type);
-		                        $key=I('kw');     //获取到标题的输入值
-                                if($type == 1){
-									$map['cn_ftname'] = array('like',"%".$key."%");     //赋值name=值 */
-								}elseif($type == 2){
-									$map['en_ftname'] = array('like',"%".$key."%");     //赋值name=值 */
-								}
-                                $this -> assign('type',$type);
+		 //语言id
+		$langname = isset($_GET['langname'])?$_GET['langname']:0;
+		//频率id
+		$hz = isset($_GET['hz'])?$_GET['hz']:0;
+		//类型id
+		$type = isset($_GET['type'])?$_GET['type']:0;
+		
+	
+		if($langname == ''){
+			$where = "";
+		}elseif($langname == 1){
+			$where = "cn_hzid = $hz and cn_tid = $type";
+			//中文类型
+			$hzselect= M('felghz')->where("en_fghz is not null")->field("id,cn_fghz as fghz")->select();
+			$this->assign('hzselect',$hzselect);
+			
+			//中文频率
+			$typeselect = M('felgtype')->where("cn_hzid = $hz")->field("id,cn_fgtypename as fgtypename")->select();
+			$this->assign('typeselect',$typeselect);
+			
+			
+		}elseif($langname == 2){
+			//英文类型  
+			$hzselect= M('felghz')->where("en_fghz is not null")->field("id,en_fghz as fghz")->select();
+			$this->assign('hzselect',$hzselect);
+			
+			//英文频率
+			$typeselect = M('felgtype')->where("en_hzid = $hz")->field("id,en_fgtypename as fgtypename")->select();
+			$this->assign('typeselect',$typeselect);
 
-                                $count= M('felgproduct')->where($map)->count();// 查询满足要求的总记录数
-                                $Page= new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
-                                $show= $Page->show();// 分页显示输出
+			$where = "en_hzid = $hz and en_tid = $type";
+		}
+		
+		    $count= M('felgproduct')->where($where)->count();// 查询满足要求的总记录数
+            $Page= new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+			$show= $Page->show();// 分页显示输出
 
-                                $result=D('felgproduct')->where($map)->limit($Page->firstRow.','.$Page->listRows)->order('ftsort')->select();
+			$result=D('felgproduct')->where($where)->limit($Page->firstRow.','.$Page->listRows)->order('ftsort')->select();
 
-                                $this->assign('page',$show);
-                                $this->assign('list',$result);
-
-                                $this->assign('val',$key);
-
-
-		//print_r($list);exit;
-
+			$this->assign('page',$show);
+			$this->assign('list',$result);
+			
+        $this->assign('langname',$langname);
+		$this->assign('typeselect',$typeselect);
+		$this->assign('type',$type);
+		$this->assign('hz',$hz);
 		$this -> display();
 	}
+	
+	//根据语言来查询出第一个频率和类型
+	public function langselect(){
+		//中英文语言
+		$langname = $_POST["langname"];
+		
+		//根据中英文语言查询出该区域的所有频率和类型第一个
+		if($langname == 0){
+			
+			$data['qxz'] = "qxz";
+			echo json_encode($data);
+		
+		}elseif($langname == 1){
+			//中文
+			//频率
+			$listhz = M('felghz')->order('fghzsort asc')->field("id,cn_fghz as hzname")->select();
+			
+			$listhzyi = M('felghz')->order('fghzsort asc')->field("id,cn_fghz as hzname")->limit(1)->find();
+			$cn_hzid = $listhzyi['id'];
+			
+			$listtype = M('felgtype')->where("cn_hzid = $cn_hzid")->order('fgtypesort asc')->field("id,cn_fgtypename as typename")->select();
+			$data['hz'] = $listhz;
+			$data['type'] = $listtype;
+			echo json_encode($data);
+			
+			
+		}elseif($langname == 2){
+			//英文
+			//频率
+			$listhz = M('felghz')->order('fghzsort asc')->field("id,en_fghz as hzname")->select();	
+
+            $listhzyi = M('felghz')->order('fghzsort asc')->field("id,en_fghz as hzname")->limit(1)->find();
+			$en_hzid = $listhzyi['id'];
+			
+			$listtype = M('felgtype')->where("en_hzid = $en_hzid")->order('fgtypesort asc')->field("id,en_fgtypename as typename")->select();			
+			$data['hz'] = $listhz;
+			$data['type'] = $listtype;
+			echo json_encode($data);			
+			
+		}
+	
+	}
+	
+	//根据频率查询出所属类型
+	public function hzselect(){
+		//中英文语言
+		$langname = $_POST["langname"];
+		//频率id
+		$hzid = $_POST["hzid"];
+		
+		
+		//根据中英文语言查询出该区域的所有类型
+		if($langname == 1){
+			//中文
+			//类型
+			$listtype = M('felgtype')->order('fgtypesort asc')->where("cn_hzid = $hzid")->field("id,cn_fgtypename as typename")->select();
+			$data['type'] = $listtype;
+			echo json_encode($data);
+			
+			
+		}elseif($langname == 2){
+			//英文
+			//类型		
+			$listtype = M('felgtype')->order('fgtypesort asc')->where("en_hzid = $hzid")->field("id,en_fgtypename as typename")->select();						$data['hz'] = $listhz;
+			$data['type'] = $listtype;
+			echo json_encode($data);			
+			
+		}
+	
+	}
+	
+	
 	//新增FELG产品
 	public function add(){
 		//FELG产品频率
@@ -72,14 +166,29 @@ class FelgproductController extends ComController {
 		//FELG产品频率
         $listhz = M('felghz')->order('fghzsort asc')->select();
 		$this->assign('listhz',$listhz);
-
-
-		//FELG产品类型
-		$listtype = M('felgtype')->order('fgtypesort asc')->select();
-		$this->assign('listtype',$listtype);
-
+		
+		
 		$link = M('felgproduct')->where('id='.$id)->find();
 		$this->assign('link',$link);
+		
+		//英文频率
+		$enhzid = $link['en_hzid'];
+		$enhznamearray = M('felghz')->where("id = $enhzid")->select();
+		$enhzname = $enhznamearray[0]['en_fghz'];
+		$this->assign('enhzname',$enhzname);
+
+        //英文类型
+		//1.根据频率名称查找出对应的类型
+		$pyidarray = M('felghz')->where("en_fghz = '$enhzname'")->find();
+		$pyid = $pyidarray['id'];
+		
+		//英文FELG产品类型
+		$listtype = M('felgtype')->where("en_hzid = $pyid")->order('fgtypesort asc')->select();
+		$this->assign('listtype',$listtype);
+		
+		
+
+		
 		
 		//中文频率
 		$cnhzid = $link['cn_hzid'];
@@ -87,11 +196,7 @@ class FelgproductController extends ComController {
 		$cnhzname = $enhznamearray[0]['cn_fghz'];
 		$this->assign('cnhzname',$cnhzname);
 			
-		//英文频率
-		$enhzid = $link['en_hzid'];
-		$enhznamearray = M('felghz')->where("id = $enhzid")->select();
-		$enhzname = $enhznamearray[0]['en_fghz'];
-		$this->assign('enhzname',$enhzname);
+		
 		
 		
 		//中文类型
@@ -100,13 +205,15 @@ class FelgproductController extends ComController {
 		$cntypename = $cntypenamearray[0]['cn_fgtypename'];
 		$this->assign('cntypename',$cntypename);
 		
-		//英文类型
+	
+		
+		
 	    $entypeid = $link['en_tid'];
 		$entypenamearray = M('felgtype')->where("id = $entypeid")->select();
 		$entypename = $entypenamearray[0]['en_fgtypename'];
 		$this->assign('entypename',$entypename);
 		//print_r($entypename);exit;
-
+//print_r($entypename);exit;
 		$this -> display();
 	}
 	//删除FELG产品

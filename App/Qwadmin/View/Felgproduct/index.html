@@ -35,11 +35,28 @@
 								<!-- PAGE CONTENT BEGINS -->
 								<form class="form-inline" action="{:U('index')}" method="get">
 									<!-- <label class="inline">中文产品名称</label> -->
-                                    <select name="typeptname">
-									       <option  <if condition="$type eq 1">selected="selected"</if> value="1">中文产品名称</option>
-									       <option  <if condition="$type eq 2">selected="selected"</if> value="2">英文产品名称</option>
+									<label class="inline">&nbsp;&nbsp;中英文：</label>
+                                    <select name="langname" id="langname" onchange="langselect()">
+									       <option <if condition="$langname eq 0">selected="selected"</if> value="0">请选择</option>
+									       <option <if condition="$langname eq 1">selected="selected"</if> value="1">中文</option>
+									       <option <if condition="$langname eq 2">selected="selected"</if> value="2">英文</option>
 									</select>
-									<input type="text" name="kw" value="<?php echo I('kw');?>" placeholder="产品名称">&nbsp;&nbsp;
+									<label class="inline">&nbsp;&nbsp;频率分类：</label>
+											<select id="hz" name="hz" onchange="hzselect()" style="width:150px;">
+													<option value="0">请选择</option>		
+                                                     <volist name="hzselect" id="val">
+													    <option <if condition="$hz eq $val['id']">selected = "selected"</if> value="{$val['id']}">{$val['fghz']}</option>	
+                                                     </volist>														
+											</select>
+											
+											<label class="inline">&nbsp;&nbsp;类型分类：</label>
+											<select id="type" name="type"  style="width:220px;">
+											         <option value ="0">请选择</option>	
+                                                     <volist name="typeselect" id="val">
+													    <option <if condition="$type eq $val['id']">selected = "selected"</if> value="{$val['id']}">{$val['fgtypename']}</option>	
+                                                     </volist>														 
+											</select>	
+									<!-- <input type="text" name="kw" value="<?php echo I('kw');?>" placeholder="产品名称">&nbsp;&nbsp; -->
                                     <button type="submit" class="btn btn-purple btn-sm">
 												<span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
 												查询
@@ -58,11 +75,11 @@
 										<tr>
 											<th class="center"><input class="check-all" type="checkbox" value=""></th>
 											<th class="col-xs-1 center">中文产品名称</th>
-											<th class="col-xs-1 center">英文产品名称</th>
-											<th class="col-xs-1 center">中文频率</th>
+											<th class="col-xs-5 center">英文产品名称</th>
+											<!-- <th class="col-xs-1 center">中文频率</th>
 											<th class="col-xs-1 center">英文频率</th>
 											<th class="col-xs-1 center">中文类型</th>
-											<th class="col-xs-1 center">英文类型</th>
+											<th class="col-xs-1 center">英文类型</th> -->
 											<th class="col-xs-1 center">排序</th>
 											<th class="center">操作</th>
 										</tr>
@@ -73,10 +90,10 @@
 											<td class="center"><input class="ids" type="checkbox" name="ids[]" value="{$val['id']}"></td>
 											<td class="center">{$val['cn_ftname']}</td>
 											<td class="center">{$val['en_ftname']}</td>
-											<td class="center"><if condition= "$val['felgcnhzname'] neq '0'">{$val['felgcnhzname']} <else />暂无中文频率</if></td>
+						<!-- 					<td class="center"><if condition= "$val['felgcnhzname'] neq '0'">{$val['felgcnhzname']} <else />暂无中文频率</if></td>
 											<td class="center"><if condition= "$val['felgenhzname'] neq '0'">{$val['felgenhzname']} <else />暂无英文频率</if></td>
 											<td class="center"><if condition= "$val['felgcntypename'] neq '0'">{$val['felgcntypename']} <else />暂无中文类型</if></td>
-											<td class="center"><if condition= "$val['felgentypename'] neq '0'">{$val['felgentypename']} <else />暂无英文类型</if></td>
+											<td class="center"><if condition= "$val['felgentypename'] neq '0'">{$val['felgentypename']} <else />暂无英文类型</if></td> -->
 											<td class="center">{$val['ftsort']}</td>
 											<td class="center">
 											<a href="{:U('edit')}?id={$val['id']}"><i class="ace-icon fa fa-pencil bigger-100"></i>修改</a>
@@ -108,6 +125,94 @@
 		<include file="Public/footerjs" />
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
+		
+		function langselect(){
+		   
+	
+		    var langname = $("#langname").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/langselect",
+					dataType:"json",
+					data:{langname:langname},
+					success:function(data){
+					   console.log(data);
+					   
+					   if(data.qxz == "qxz"){
+					       //把频率分类元素删除
+                           $('#hz').empty();
+						   var htmlf = '<option  value="0">请选择</option>';
+						   $('#hz').append(htmlf);
+						   
+						    //把类型元素删除
+                           $('#type').empty();
+						   var htmlt = '<option  value="0">请选择</option>';
+						   $('#type').append(htmlt);
+					   }else{
+					   					   
+					      //把频率分类元素删除
+					      $('#hz').empty();										
+						  var htmlf = '';			  
+						  $(data.hz).each(function(k,v){
+							  htmlf += '<option  value="'+v.id+'" id="hz'+v.id+'">'+v.hzname+'</option>';
+						  });
+						  $('#hz').append(htmlf);
+						  
+						  
+						   //把类型分类元素删除
+					      $('#type').empty();										
+						  var htmlf = '';			  
+						  $(data.type).each(function(k,v){
+							  htmlf += '<option  value="'+v.id+'" id="type'+v.id+'">'+v.typename+'</option>';
+						  });
+						  $('#type').append(htmlf);
+					   }
+                    }
+					
+			    });
+		}
+		
+		
+		
+		
+		
+		function hzselect(){
+		   
+			
+		    var langname = $("#langname").val();
+			var hzid = $("#hz").val();
+			
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/hzselect",
+					dataType:"json",
+					data:{langname:langname,hzid:hzid},
+					success:function(data){
+					   console.log(data);
+					   
+					   
+					  //把类型元素删除
+					  $('#type').empty();
+								
+					  var htmlf = '';			  
+					  $(data.type).each(function(k,v){
+						  htmlf += '<option value="'+v.id+'" id="type'+v.id+'">'+v.typename+'</option>';
+					  });
+
+					  $('#type').append(htmlf);
+					 
+                    }
+					
+			    });
+		}
+		
+		
+		
+		
+		
+		
 		$(function(){
 			$(".check-all").click(function(){
 				$(".ids").prop("checked", this.checked);

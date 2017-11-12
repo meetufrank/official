@@ -13,6 +13,8 @@ class SwiperController extends ComController {
 		
 		$hzid = $_GET['fid'];
 		$typeid = $_GET['typeid'];
+	
+		
 		
 		
 		//根据频率和类型id,产品
@@ -21,7 +23,8 @@ class SwiperController extends ComController {
 		$ptsselect ="id,".$language."ftname as ftname,".$language."ftimg as ftimg,".$language."fttitle as ftitle,".$language."tid as tid";
 		$hztypept = $felgproduct->order("ftsort")->where($ptwhere)->field($ptsselect)->select();
 		
-		//print_r($hztypept);
+		//echo $felgproduct->getLastSql();exit;
+		
 		$this -> assign('hztypept',$hztypept);
 	
 		

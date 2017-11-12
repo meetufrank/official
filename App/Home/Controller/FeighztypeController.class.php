@@ -50,7 +50,7 @@ class FeighztypeController extends ComController {
 		//取出所有产品
 		$felgproduct = M('felgproduct');
 		$ptsselect ="id,".$language."ftname as ftname,".$language."ftimg as ftimg,".$language."fttitle as ftitle,".$language."tid as tid";
-		$hztypept = $felgproduct->order("ftsort")->field($ptsselect)->select();
+		$hztypept = $felgproduct->order("ftsort asc")->field($ptsselect)->select();
 		
 		$hztypes_arr = [];
 		foreach($typeyi as $key => $value){
