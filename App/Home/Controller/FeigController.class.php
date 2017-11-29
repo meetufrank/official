@@ -66,10 +66,8 @@ class FeigController extends ComController {
 		foreach($typeyi as $key => $value){
 			
 			foreach($hztypept as $k=>$v){
-				
-				if($v['tid']==$value['id']){
-					
-					$hztypes_arr[$key]['type'] = $value;
+				$hztypes_arr[$key]['type'] = $value;
+				if($v['tid']==$value['id']){	
 					$hztypes_arr[$key]['pt'][] = $v;
 				}
 			}

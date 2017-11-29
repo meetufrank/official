@@ -40,10 +40,10 @@
 									<div  class="form-group" id="felgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER中文频率 </label>
 										<div class="col-sm-9">
-										<select name="felgcnhz" id="felgcnhz" class="col-xs-10 col-sm-5">
+										<select name="felgcnhz" id="felgcnhz" onclick="cnhz()" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option <if condition="$link['rflinkercnhzname'] == $val['cn_rflinkerhz']">selected="selected"</if> value ="{$val['cn_rflinkerhz']}"> {$val['cn_rflinkerhz']}</option>
+												  <option <if condition="$cnhzname == $val['cn_rflinkerhz']">selected="selected"</if> value ="{$val['id']}"> {$val['cn_rflinkerhz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -61,7 +61,7 @@
 										<select name="felgcntype" id="felgcntype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
-												    <option <if condition="$link['rflinkercntypename'] == $val['cn_rflinkertypename']">selected="selected"</if> value ="{$val['cn_rflinkertypename']}"> {$val['cn_rflinkertypename']}</option>
+												    <option <if condition="$cntypename == $val['cn_rflinkertypename']">selected="selected"</if> value ="{$val['id']}"> {$val['cn_rflinkertypename']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -158,10 +158,10 @@
 									<div class="form-group" id="enfelgcnhzdiv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文频率 </label>
 										<div class="col-sm-9">
-										<select name="enfelgcnhz" id="enfelgcnhz" class="col-xs-10 col-sm-5">
+										<select name="enfelgcnhz" id="enfelgcnhz" class="col-xs-10 col-sm-5" onchange="enhz()">
 										        <option value ="0">请选择</option>
 										        <volist name="listhz" id="val">
-												  <option <if condition="$link['rflinkerenhzname'] == $val['en_rflinkerhz']">selected="selected"</if> value ="{$val['en_rflinkerhz']}"> {$val['en_rflinkerhz']}</option>
+												  <option <if condition="$enhzname == $val['en_rflinkerhz']">selected="selected"</if> value ="{$val['id']}"> {$val['en_rflinkerhz']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -176,10 +176,10 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文类型 </label>
 										<div class="col-sm-9">
-										<select name="enfelgcntype" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										<select name="enfelgentype" id="enfelgentype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										        <volist name="listtype" id="val">
-												    <option <if condition="$link['rflinkerentypename'] == $val['en_rflinkertypename']">selected="selected"</if> value ="{$val['en_rflinkertypename']}"> {$val['en_rflinkertypename']}</option>
+												    <option <if condition="$entypename == $val['en_rflinkertypename']">selected="selected"</if> value ="{$val['id']}"> {$val['en_rflinkertypename']}</option>
 												</volist>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -317,6 +317,63 @@
 		
 		
 		<script type="text/javascript">
+		
+		
+		function cnhz(){
+		   
+			//中文hzid
+		    var felgcnhz = $("#felgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/cnhzaddinfo",
+					dataType:"json",
+					data:{felgcnhz:felgcnhz},
+					success:function(data){
+					   console.log(data);
+					   
+					   
+					    $('#felgcntype').empty();
+					    var htmlf = '';			  
+						$(data.cntype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="cntype'+v.id+'">'+v.en_rflinkertypename+'</option>';
+						});
+
+						$('#felgcntype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		function enhz(){
+		   
+			//英文hzid
+		    var enfelgcnhz = $("#enfelgcnhz").val();
+			
+		    $.ajax({
+					type:"post",
+					url:"__CONTROLLER__/enhzaddinfo",
+					dataType:"json",
+					data:{enfelgcnhz:enfelgcnhz},
+					success:function(data){
+					   console.log(data);
+					   					   
+					    $('#enfelgentype').empty();
+					    var htmlf = '';			  
+						$(data.entype).each(function(k,v){
+							htmlf += '<option  value="'+v.id+'" id="entype'+v.id+'">'+v.en_rflinkertypename+'</option>';
+						});
+
+						$('#enfelgentype').append(htmlf);
+					  
+                    }
+					
+			    });
+		}
+		
+		
+		
 		$(function() {
 			var editor = KindEditor.create('textarea[name="en_rrspec"]',{
 				uploadJson : '__PUBLIC__/kindeditor/php/upload_json.php',
