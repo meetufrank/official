@@ -963,19 +963,21 @@ background-color: #02AAF1;
 }
 .product-image .img-responsive{
     display: inline-block;
-    max-width: 80%;
+    max-width:65%;
     -webkit-transform-style: preserve-3d;
     height: auto;
 }
 .product-info{
-    height: 145px;
+    min-height: 120px;
     background-color: #e5e8eb;
     padding: 15px;
 }
 .product-identifier,.product-name,.product-appendix{
     color: black;
+    font-size:0.7rem;
 }
 .product-identifier a{
+  font-size: 1rem;
   color: #00aaf0;
   text-decoration: none;
 }
