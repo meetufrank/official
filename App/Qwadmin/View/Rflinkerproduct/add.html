@@ -176,7 +176,7 @@
 									<div class="form-group" id="enfelgcntypediv">
 										<label class="col-sm-1 control-label no-padding-right" for="form-field-1"> RFLINKER英文类型 </label>
 										<div class="col-sm-9">
-										<select name="enfelgcntype" id="enfelgcntype" class="col-xs-10 col-sm-5">
+										<select name="enfelgentype" id="enfelgentype" class="col-xs-10 col-sm-5">
 										        <option value ="0">请选择</option>
 										</select>								
 											<span class="help-inline col-xs-12 col-sm-7">
@@ -313,14 +313,15 @@
 	<script type="text/javascript">
 	
 		function cnhz(){
-		   
+		   //英文hzid
+		    var rflinkercnhz = $("#rflinkercnhz").val();
 			//中文hzid
 
 		    $.ajax({
 					type:"post",
 					url:"__CONTROLLER__/cnhzaddinfo",
 					dataType:"json",
-					data:{rflinkercnhz:rflinkercnhz},
+					data:{felgcnhz:rflinkercnhz},
 					success:function(data){
 					   console.log(data);
 					   
@@ -348,17 +349,17 @@
 					type:"post",
 					url:"__CONTROLLER__/enhzaddinfo",
 					dataType:"json",
-					data:{rflinkerenhz:rflinkerenhz},
+					data:{enfelgcnhz:rflinkerenhz},
 					success:function(data){
 					   console.log(data);
 					   					   
-					    $('#enfelgcntype').empty();
+					    $('#enfelgentype').empty();
 					    var htmlf = '';			  
 						$(data.entype).each(function(k,v){
 							htmlf += '<option  value="'+v.id+'" id="entype'+v.id+'">'+v.en_rflinkertypename+'</option>';
 						});
 
-						$('#enfelgcntype').append(htmlf);
+						$('#enfelgentype').append(htmlf);
 					  
                     }
 					

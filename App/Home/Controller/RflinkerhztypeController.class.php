@@ -3,7 +3,7 @@
 namespace Home\Controller;
 use Think\Controller;
 use Vendor\Page;
-class FeighztypeController extends ComController {
+class RflinkerhztypeController extends ComController {
     public function index(){
 	
         //判断当前语言
@@ -13,15 +13,15 @@ class FeighztypeController extends ComController {
 		
 		
 		//查询出频率
-		$felghz = M("felghz");
-		$felghzselect = "id,".$language."fghz as hzname";
-		$hzlist = $felghz->field($felghzselect)->order('fghzsort')->select();
-		
+		$rflinkerhz = M("rflinkerhz");
+		$rflinkerhzselect = "id,".$language."rflinkerhz as rflinkerhz";
+		$hzlist = $rflinkerhz->field($rflinkerhzselect)->order('rrsort')->select();
+	
 		
 		//查询出类型
-		$felgtype = M("felgtype");
-		$felgtypeselect = "id,".$language."fgtypename as fgtypename,".$language."hzid as hzid";
-		$typelist = $felgtype->field($felgtypeselect)->order('fgtypesort')->select();
+		$rflinkertypes = M("rflinkertype");
+		$rflinkertypeselect = "id,".$language."rflinkertypename as fgtypename,".$language."hzid as hzid";
+		$typelist = $rflinkertypes->field($rflinkertypeselect)->order('rrtypesort')->select();
 		
 		$hztype_arr = [];
 		foreach($hzlist as $key=>$value){  
@@ -32,7 +32,7 @@ class FeighztypeController extends ComController {
 				}
 			}
 		}
-	
+		//print_r($hztype_arr);exit;
 		$this -> assign('hztype_arr',$hztype_arr);
 		
 		
@@ -41,16 +41,16 @@ class FeighztypeController extends ComController {
 		
 		
 		//取出该频率下的所有类型
-		$felgtype = M('felgtype');
-		$selecttypeyi ="id,".$language."fgtypename as fgtypename,".$language."hzid as hzid";
+		$rflinkertype = M('rflinkertype');
+		$selecttypeyi ="id,".$language."rflinkertypename as fgtypename,".$language."hzid as hzid";
 		$typeyiwhere =$language."hzid = $fid";
-		$typeyi = $felgtype->order('fgtypesort')->where($typeyiwhere)->field($selecttypeyi)->select();
+		$typeyi = $rflinkertype->order('rrtypesort')->where($typeyiwhere)->field($selecttypeyi)->select();
 		
 
 		//取出所有产品
-		$felgproduct = M('felgproduct');
-		$ptsselect ="id,".$language."ftname as ftname,".$language."ftimg as ftimg,".$language."fttitle as ftitle,".$language."tid as tid";
-		$hztypept = $felgproduct->order("ftsort asc")->field($ptsselect)->select();
+		$rflinkerproduct = M('rflinkerproduct');
+		$ptsselect ="id,".$language."rrname as ftname,".$language."rrimg as ftimg,".$language."rrtitle as ftitle,".$language."tid as tid";
+		$hztypept = $rflinkerproduct->order("rrsort asc")->field($ptsselect)->select();
 		
 		$hztypes_arr = [];
 		foreach($typeyi as $key => $value){

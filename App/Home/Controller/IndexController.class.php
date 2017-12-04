@@ -36,9 +36,21 @@ class IndexController extends ComController {
 		$felghz = M('felghz');
 		$selectfelghz="id,".$language."fghz as fghz,".$language."fghztitle as fghztitle,".$language."fghzimg as fghzimg,fghzsort";
 		$felghzs = $felghz->order('fghzsort')->limit(4)->getField($selectfelghz);
-		$this->assign('felghzs',$felghzs);
-		//print_r($felghzs);exit;
 		
+		//查询出felg下类型的第一个频率
+		foreach($felghzs as $key => $val){
+			$hzid = $val['id'];
+            $indexhztypewhere = $language."hzid = $hzid";			
+			$indexhztype = M("felgtype")->where($indexhztypewhere)->order("fgtypesort")->limit(1)->select();
+			foreach($indexhztype as $k => $v){
+				
+				$felghzs[$key]['typeid'] = $v['id'];
+			}
+			
+			
+		}
+		
+		$this->assign('felghzs',$felghzs);
 		
 		
 		//rflinker产品
@@ -61,7 +73,7 @@ class IndexController extends ComController {
 		$selectiy = "id,".$language."imgiy as imgiy,iysort"; 
 		$iyimg = $industry->order('iysort')->limit(4)->getField($selectiy);
 		$this->assign('iyimg',$iyimg);
-		/* print_r($iyimg);exit; */
+		
 		$this -> display();
 		
     }

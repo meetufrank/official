@@ -19,13 +19,13 @@
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/flexslider.css">
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/owl.carousel.css">
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/style.css">
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/style.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/style.css?id=2">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/style.css?id=2">
   <!-- new css by wys -->
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/new.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/qiantai/css/new.css?v=1.0">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
-   <!-- swiper styles -->
+  <!-- swiper styles -->
     <style>
     @media (max-width:768px) {
       .swiper-container-banner {
@@ -82,7 +82,7 @@
         align-items: center;
     }
     .prda i{
-      margin-left:10px; 
+      margin-left: 10px;
     }
     </style>
 </head>
@@ -104,7 +104,7 @@
   </div>
   <!-- End Preloader -->
 <div class="scrollable product-scrollable" id="scrollable">
-    <!-- Swiper -->
+  <!-- Swiper -->
     <div class="swiper-container swiper-container-banner">
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-banner"></div>
@@ -113,17 +113,16 @@
         <div class="swiper-pagination swiper-pagination-banner"></div>
     </div>
   <!-- Swiper end -->
-
   <div class="container-fluid p-container-fluid">
     <div class="row" id="product-intro">
             <!-- 频率类型 -->
 			<volist name="hztype_arr" id="vo">		  		 
 						<div class="col-lg-4 col-xs-12 product-float">
 								<div class="product-dropdown">
-										<a href="#" title="Produkte nach Kategorie" class="prda" id="{$vo['hz']['id']}">{$vo['hz']['hzname']}<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+										<a href="#" title="Produkte nach Kategorie" class="prda" id="{$vo['hz']['id']}">{$vo['hz']['rflinkerhz']}<i class="fa fa-arrow-down" aria-hidden="true"></i></a>
 									<div class="product-dropdown-inner">
 										<volist name="vo['type']" id="voer">	
-											<a href="{:U('Rflinkerhztype/index')}?typeid={$voer['id']}&fid={$voer['hzid']}" title="Produkte nach Kategorie" id="{$voer['id']}">{$voer['rflinkertypename']}</a> 
+											<a href="{:U('Rflinkerhztype/index')}?typeid={$voer['id']}&fid={$voer['hzid']}" title="Produkte nach Kategorie" id="{$voer['id']}">{$voer['fgtypename']}</a> 
 										</volist>
 									</div>
 								</div>	
@@ -136,18 +135,18 @@
 	
     <div class="panels">
         <div class="panel-group" id="accordion">
-	
+		
 		     <volist name="hztypes_arr" id="vo">
 				  <div class="panel panel-default my-panel-heading">
 					<div class="panel-heading">
 					  <h2 class="panel-title">
 						<a id="{$vo['type']['id']}" data-toggle="collapse" data-parent="#accordion" 
-						   data-target="#{$vo['type']['rflinkertypename']|str_replace=' ','',###}">
-						   {$vo['type']['rflinkertypename']}
+						   data-target="#{$vo['type']['fgtypename']|str_replace=' ','',###}">
+						   {$vo['type']['fgtypename']}
 						</a>
 					  </h2>
 					</div>
-					<div id="{$vo['type']['rflinkertypename']|str_replace=' ','',###}" class="panel-collapse collapse">
+					<div id="{$vo['type']['fgtypename']|str_replace=' ','',###}" class="panel-collapse collapse <if condition="$typeid == $vo['type']['id']">in</if>">
 					  <div class="panel-body">
 					    <div class="panel-body">
                               <iframe src="{:U('Rflinkerswiper/index')}?typeid={$vo['type']['id']}&fid={$vo['type']['hzid']}" style="width:1280px;height:500px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
@@ -155,16 +154,15 @@
 					  </div>
 					</div>
 				  </div>
-			</volist>    
+			</volist> 
+			
+			
+
+	   
         </div>
     </div>
-	
-	
-	
-	
-	
   </div>
-  <include file="Public/footer"/>
+<include file="Public/footer"/>
 </div>
 <!-- Scripts -->
 <script type="text/javascript" src="__PUBLIC__/qiantai/js/jquery.min.js"></script>

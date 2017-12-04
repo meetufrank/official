@@ -6,428 +6,90 @@ use Vendor\Page;
 class RflinkerController extends ComController {
     public function index(){
 		
-        //判断当前语言
+         //判断当前语言
 		$language = L('language');
 		$languages = L('languages');
 		$this->assign('language',$language);
 		
 		
-
-		$this->display();
-    }
-	
-	
-	
-	//页面频率的第一次加载更多
-	public function rrhzyijiazai(){
+		//查询出频率
+		$rflinkerhz = M("rflinkerhz");
+		$rflinkerhzselect = "id,".$language."rflinkerhz as hzname";
+		$hzlist = $rflinkerhz->field($rflinkerhzselect)->order('rrsort')->select();
 		
-		 //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-         //rflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-          
-         //传递的页数
-         $p = $_POST['p'];
-
-         //频率名称
-         $hzname = $_POST['hzname'];
-		  
-         //定义每次显示产品条数
-	     $row = 8;
-
-        //判断产品总条数
-		$coountWhere = "rflinker".$languages."hzname = '".$hzname."'";
-		$sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
 		
-		//查询出符合当前频率的产品有多少
-		$icount = $rflinkerproductyi->query($sqlcount);
-        $icount = $icount[0]['count'];
-		//print_r($icount);exit;
-	     //总条数             17
-	     $_count = ceil($icount / $row);
-        //print_r($_count);exit;
-         if(!isset($p)){
-			$p = 1;
-		}else{
-			$p = $p;
-			if($p > $_count){
-				$p = $_count;
+	
+		
+		//查询出类型
+		$rflinkertype = M("rflinkertype");
+		$rflinkertypeselect = "id,".$language."rflinkertypename as rflinkertypename,".$language."hzid as hzid";
+		$typelist = $rflinkertype->field($rflinkertypeselect)->order('rrtypesort')->select();
+		
+		$hztype_arr = [];
+		foreach($hzlist as $key=>$value){  
+			foreach($typelist as $k=>$v){
+				if($v['hzid']==$value['id']){
+					$hztype_arr[$key]['hz']=$value;
+					$hztype_arr[$key]['type'][]=$v;
+				}
 			}
 		}
-		   
-        //当前页码
-		$offset = ($p - 1) * $row;
-
-        $ptjiazaiHzSelect ="id,({$_count}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rimg,".$language."rrname as rrname,rrsort";
-
-		$ptjiazaiHzWhere = "rflinker".$languages."hzname = "."'".$hzname."' limit $offset,$row";
-		$sql = "select $ptjiazaiHzSelect from `qw_rflinkerproduct` where ".$ptjiazaiHzWhere;
-	
-		$data = $rflinkerproductyi -> query($sql);
-        
+		//print_r($hztype_arr);exit;
+		$this -> assign('hztype_arr',$hztype_arr);
 		
-		echo json_encode($data);
 		
-	}
+		
+		//页面第一次加载,第一个频率下的类型和产品
+	    //频率
+		//取出频率第一条id
+		$rflinkerhz = M('rflinkerhz');
+		$selecthzyi ="id,".$language."rflinkerhz as rflinkerhz";
+		$hzyiwhere = "$languagerflinkerhz";
+		$hzyi = $rflinkerhz->order('rrsort')->where($hzyiwhere)->limit(1)->field($selecthzyi)->select();
+		$hzyiid = $hzyi[0]['id'];
+		$hzyirflinkerhz = $hzyi[0]['rflinkerhz'];
+				
+		$this -> assign('hzyiid',$hzyiid);
+	    $this -> assign('hzyirflinkerhz',$hzyirflinkerhz);
+		
+		
+		//取出第一个频率下的所有类型
+		$rflinkertype = M('rflinkertype');
+		$selecttypeyi ="id,".$language."rflinkertypename as rflinkertypename,".$language."hzid as hzid";
+		$typeyiwhere =$language."hzid = $hzyiid";
+		$typeyi = $rflinkertype->order('rrtypesort')->where($typeyiwhere)->field($selecttypeyi)->select();
+		
+		//print_r($typeyi);exit;
+
+		//取出所有产品
+		$rflinkerproduct = M('rflinkerproduct');
+		$ptsselect ="id,".$language."rrname as rrname,".$language."rrimg as rrimg,".$language."rrtitle as rrtitle,".$language."tid as tid";
+		$hztypept = $rflinkerproduct->order("rrsort")->field($ptsselect)->select();
+	/* 	echo M('rflinkerproduct')->getlastsql();
+		exit;  */
+		$hztypes_arr = [];
+		foreach($typeyi as $key => $value){
+			
+			foreach($hztypept as $k=>$v){
+				$hztypes_arr[$key]['type'] = $value;
+				if($v['tid']==$value['id']){
+					
+					
+					$hztypes_arr[$key]['pt'][] = $v;
+					
+				}
+			}
+		}
+		//print_r($hztypes_arr);exit;
 	
-	
-	//频率类型筛选产品
-    public function hztypeptyi(){
-  
-	      //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-	     //rflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-
-	     $hzname = $_POST['rrlghzname'];
-
-	     $typename = $_POST['rrhztype'];
-		 
-	     //定义每次显示产品条数
-	     $row = 8;
-          
-	     //判断产品总条数
-	     $coountWhere = "rflinker".$languages."hzname = '".$hzname."' and rflinker".$languages."typename = '".$typename."' order by rrsort";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-	     $icount = $icount[0]['count'];
-
+		$this -> assign('hztypes_arr',$hztypes_arr);
 	    
-
-
-	     $ptHzTypeYiAllSelect = "id,({$icount}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rflinker".$languages."hzname as hzname,rflinker".$languages."typename as typename,rrsort";
-         
-         $ptHzTypeYiAllWhere  = "rflinker".$languages."hzname = '".$hzname."' and rflinker".$languages."typename = '".$typename."' order by rrsort limit 0,8";
-         $ptHzTypeYiAllSql = "select $ptHzTypeYiAllSelect from qw_rflinkerproduct where $ptHzTypeYiAllWhere";
-		 $ptHzTypeYiAllSqlS = $rflinkerproductyi->query($ptHzTypeYiAllSql);
-          
-         //print_r($ptHzTypeYiAllSqlS);exit;
-        
-
-         echo json_encode($ptHzTypeYiAllSqlS);
-	    
-
-
+		
+		$this->display(); 
+		
     }
 	
 	
 	
-	//第一次频率类型加载更多
-
-    public function jiazaihptztypes(){
-
-    	 //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-          //rflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-          
-          //传递的页数
-          $p = $_POST['p'];
-
-
-          //频率名称
-          $hzname = $_POST['hzname'];
-
-          //类型名称
-          $typename = $_POST['typename'];
-
-
-
-          //定义每次显示产品条数
-	      $row = 8;
-   
-         //判断产品总条数
-	     
-	     $coountWhere = "rflinker".$languages."hzname = '".$hzname."' and rflinker".$languages."typename = '".$typename."' order by rrsort";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-
-	     //总条数
-	     $_count = ceil($icount[0]['count'] / $row);
-
-      
-         
-
-         if(!isset($p)){
-			$p = 1;
-		}else{
-			$p = $p;
-			if($p > $_count){
-				$p = $_count;
-			}
-		}
-        //当前页码
-		$offset = ($p - 1) * $row;
-
-       
-        
-        $ptjiazaiHzSelect ="id,({$_count}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rrsort";
-
-
-		$ptjiazaiHzWhere = "rflinker".$languages."hzname = "."'".$hzname."' and rflinker".$languages."typename = '".$typename."'  limit $offset,$row";
-		$sql = "select $ptjiazaiHzSelect from `qw_rflinkerproduct` where ".$ptjiazaiHzWhere;
-	    //print_r($sql);exit;
-		
-		$data = $rflinkerproductyi -> query($sql);
-        
-		
-		echo json_encode($data);
-
-
-    }
-	
-
-	
-    //刷选类型(根据ajax传递频率，查找类型)
-	public function rrhztypepick(){
-		
-		  //判断当前语言
-		  $language = L('language');
-		  $languages = L('languages');
-		  
-		  //频率名称
-		  $rrhzname =  $_POST['rrhzname'];
-		
-		
-		 $HzTypePickSelect = "distinct rflinker".$languages."typename as rrtypename, rflinker".$languages."hzname as hzname";
-		 $HzWhere = "rflinker".$languages."hzname = '".$rrhzname."' and rflinker".$languages."typename !='0' order by rrsort";
-		
-		 $HzTypeSql = "select $HzTypePickSelect from qw_rflinkerproduct where $HzWhere";
-		  //rflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-		 $HzTypes = $rflinkerproductyi->query($HzTypeSql);
-
-		 echo json_encode($HzTypes);
-
-	}
-	
-	
-	//根据频率,查找对应的所有产品
-	public function rrhzall(){
-
-	     //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-	     //频率名称
-		 $rrhzname =  $_POST['rrhzname'];
-
-         //rflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-
-	     //定义每次显示产品条数
-	     $row = 8;
-          
-	     //判断产品总条数
-	     $coountWhere = "rflinker".$languages."hzname = '".$rrhzname."'";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-	     $icount = $icount[0]['count'];
-
-     
-         //根据频率名称,查询出该频率的所有产品
-		 $pthzallWhere = "rflinker".$languages."hzname = '".$rrhzname."' order by rrsort limit 0,8 ";
-		    
-		 $pthzallSelect ="id,({$icount}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rflinker".$languages."hzname as hzname,rrsort";
-		 $pthzallSql = "select $pthzallSelect from qw_rflinkerproduct where $pthzallWhere";
-		 //print_r($pthzallSql);exit;
-		 $pthzallSqls = $rflinkerproductyi->query($pthzallSql);
-       
-         echo json_encode($pthzallSqls);
-	}
-	
-	
-	
-	
-	 //频率的加载更多
-    public function Hzgetlist(){
-
-    	 //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-         //rrflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-          
-          //传递的页数
-          $p = $_POST['p'];
-
-          //print_r($p);exit;
-          //频率名称
-          $hzname = $_POST['hzname'];
-
-          //定义每次显示产品条数
-	      $row = 8;
-   
-         //判断产品总条数
-	     $coountWhere = "rflinker".$languages."hzname = '".$hzname."'";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-
-	     //总条数
-	     $_count = ceil($icount[0]['count'] / $row);
-
-         if(!isset($p)){
-			$p = 1;
-		}else{
-			$p = $p;
-			if($p > $_count){
-				$p = $_count;
-			}
-		}
-        //当前页码
-		$offset = ($p - 1) * $row;
-
-
-        $ptjiazaiHzSelect ="id,({$_count}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rrsort";
-
-
-		$ptjiazaiHzWhere = "rflinker".$languages."hzname = "."'".$hzname."' limit $offset,$row";
-		$sql = "select $ptjiazaiHzSelect from `qw_rflinkerproduct` where ".$ptjiazaiHzWhere;
-		
-		
-		$data = $rflinkerproductyi -> query($sql);
-        //print_r($data);exit;
-		
-		echo json_encode($data);
-
-
-    }
-	
-	
-	//根据频率和类型查找对应所有产品
-   public function typeptall(){
-
-         //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-         
-         //频率名称
-		 $rrhzname = $_POST['rrhzname'];
-
-         //类型名称
-		 $rrtypename =  $_POST['rrtypename'];
-
-
-		 //rrflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-
-
-		 //定义每次显示产品条数
-	     $row = 8;
-
-	     
-          
-	     //判断产品总条数
-	     $coountWhere = "rflinker".$languages."hzname = '".$rrhzname."' and rflinker".$languages."typename = '".$rrtypename."' order by rrsort";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-	     $icount = $icount[0]['count'];
-
-         
-         $ptHzTypeAllSelect = "id,({$icount}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rflinker".$languages."hzname as hzname,rflinker".$languages."typename as typename,rrsort";
-         
-         $ptHzTypeAllWhere  = "rflinker".$languages."hzname = '".$rrhzname."' and rflinker".$languages."typename = '".$rrtypename."' order by rrsort limit 0,8";
-         $ptHzTypeAllSql = "select $ptHzTypeAllSelect from qw_rflinkerproduct where $ptHzTypeAllWhere";
-		 $ptHzTypeAllSqlS = $rflinkerproductyi->query($ptHzTypeAllSql);
-          
-        
-
-         echo json_encode($ptHzTypeAllSqlS);
-		
-
-
-   }
-	
-	
-	
-    //频率类型的加载更多
-    public function HzTypegetlist(){
-
-    	 //判断当前语言
-	     $language = L('language');
-	     $languages = L('languages');
-
-         //rrflinker产品
-	     $rflinkerproductyi = M('rflinkerproduct');
-          
-          //传递的页数
-          $p = $_POST['p'];
-
-
-          //频率名称
-          $hzname = $_POST['hzname'];
-
-          //类型名称
-          $typename = $_POST['typename'];
-
-          //定义每次显示产品条数
-	      $row = 8;
-   
-         //判断产品总条数
-	     
-	     $coountWhere = "rflinker".$languages."hzname = '".$hzname."' and rflinker".$languages."typename = '".$typename."' order by rrsort";
-	     $sqlcount ="select count(*) as count from qw_rflinkerproduct where ".$coountWhere;
-
-         //查询出符合当前频率的产品有多少
-	     $icount = $rflinkerproductyi->query($sqlcount);
-	     
-
-	     //总条数
-	     $_count = ceil($icount[0]['count'] / $row);
-
-      
-         
-
-         if(!isset($p)){
-			$p = 1;
-		}else{
-			$p = $p;
-			if($p > $_count){
-				$p = $_count;
-			}
-		}
-        //当前页码
-		$offset = ($p - 1) * $row;
-
-       
-        
-        $ptjiazaiHzSelect ="id,({$_count}) as count,".$language."rrtitle as rrtitle,".$language."rrimg as rrimg,".$language."rrname as rrname,rrsort";
-
-
-		$ptjiazaiHzWhere = "rflinker".$languages."hzname = "."'".$hzname."' and rflinker".$languages."typename = '".$typename."'  limit $offset,$row";
-		$sql = "select $ptjiazaiHzSelect from `qw_rflinkerproduct` where ".$ptjiazaiHzWhere;
-	//print_r($sql);exit;
-		
-		$data = $rflinkerproductyi -> query($sql);
-        
-		
-		echo json_encode($data);
-
-
-    }
 	
 }
